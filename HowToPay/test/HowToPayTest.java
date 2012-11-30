@@ -31,5 +31,4 @@ public class HowToPayTest  {
 		Purse.Builder builder = new Purse.Builder();
 		Purse purse = builder.co500(2).co100(4).co050(1).co010(4).co005(1).co001(4).build();
 	}
-
 }

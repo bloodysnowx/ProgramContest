@@ -57,4 +57,27 @@ public class Purse {
 		count_of_005 = builder.count_of_005;
 		count_of_001 = builder.count_of_001;
 	}
+	
+	private int sum;
+	private int remainder;
+	
+	public int pay(int money) {
+		sum = 0;
+		remainder = money;
+		int values[] = { 500, 100, 50, 10, 5, 1 };
+		int nums[] = { count_of_500, count_of_100, count_of_050, count_of_010, count_of_005, count_of_001 };
+		for(int i = 0; i < values.length; ++i)
+		{
+			payWith(values[i], nums[i]);
+		}
+		
+		return sum;
+	}
+	
+	private void payWith(int value, int num)
+	{
+		int count = Math.min(remainder / value, num);
+		sum += count;
+		remainder -= count * value;
+	}
 }
