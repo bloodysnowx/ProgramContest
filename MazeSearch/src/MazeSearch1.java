@@ -6,6 +6,7 @@ public class MazeSearch1 implements MazeSearch {
 		findGoal(maze);
 		for (int i = 0; i < Integer.MAX_VALUE; ++i) {
 			if (findNeighbor(maze, i)) {
+				printDistance(distance, maze);
 				return i + 1;
 			}
 		}
@@ -65,5 +66,24 @@ public class MazeSearch1 implements MazeSearch {
 			System.out.println();
 		}
 
+	}
+
+	private void printDistance(int[][] distance, MazePattern[][] maze) {
+		for (int i = 0; i < distance.length; ++i) {
+			for (int j = 0; j < distance[i].length; ++j) {
+				if (maze[i][j] == MazePattern.GOAL) {
+					System.out.print("GG");
+				} else if (maze[i][j] == MazePattern.START) {
+					System.out.print("SS");
+				} else if (distance[i][j] == Integer.MAX_VALUE) {
+					System.out.print("xx");
+				} else if (distance[i][j] < 10) {
+					System.out.print("0" + distance[i][j]);
+				} else {
+					System.out.print(distance[i][j]);
+				}
+			}
+			System.out.println();
+		}
 	}
 }
