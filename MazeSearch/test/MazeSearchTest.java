@@ -44,6 +44,76 @@ public class MazeSearchTest {
 		assertEquals(22, mazeSearch.search(convert(mazeStr)));
 	}
 
+	@Test
+	public void testSearch1() {
+		// @formatter:off
+		String[] mazeStr = { 
+				"#S#",
+				"#G#"};
+		// @formatter:on
+		assertEquals(1, mazeSearch.search(convert(mazeStr)));
+	}
+
+	@Test
+	public void testSearch2() {
+		// @formatter:off
+		String[] mazeStr = { 
+				"#S#",
+				"...",
+				"#G#"};
+		// @formatter:on
+		assertEquals(2, mazeSearch.search(convert(mazeStr)));
+	}
+
+	@Test
+	public void testSearch3() {
+		// @formatter:off
+		String[] mazeStr = { 
+				"#S.#",
+				"....",
+				"....",
+				"#G.#"};
+		// @formatter:on
+		assertEquals(3, mazeSearch.search(convert(mazeStr)));
+	}
+
+	@Test
+	public void testSearch4() {
+		// @formatter:off
+		String[] mazeStr = { 
+				"#S.#",
+				"....",
+				"....",
+				"#.G#"};
+		// @formatter:on
+		assertEquals(4, mazeSearch.search(convert(mazeStr)));
+	}
+
+	@Test
+	public void testSearch5() {
+		// @formatter:off
+		String[] mazeStr = { 
+				"#S.#",
+				".#..",
+				"....",
+				"#G.#"};
+		// @formatter:on
+		assertEquals(5, mazeSearch.search(convert(mazeStr)));
+	}
+
+	@Test
+	public void testSearch6() {
+		// @formatter:off
+		String[] mazeStr = { 
+				"#S.#",
+				".#..",
+				"....",
+				".#..",
+				"#G.#"};
+		// @formatter:on
+		assertEquals(6, mazeSearch.search(convert(mazeStr)));
+	}
+
 	private MazePattern[][] convert(String[] mazeStr) {
 		MazePattern[][] maze = new MazePattern[mazeStr.length + 2][mazeStr[0]
 				.length() + 2];
