@@ -14,32 +14,32 @@ public class Purse {
 		private int count_of_005 = 0;
 		private int count_of_001 = 0;
 
-		public Builder countOf500(int count) {
+		public Builder co500(int count) {
 			count_of_500 = count;
 			return this;
 		}
 
-		public Builder countOf100(int count) {
+		public Builder co100(int count) {
 			count_of_100 = count;
 			return this;
 		}
 
-		public Builder countOf050(int count) {
+		public Builder co050(int count) {
 			count_of_050 = count;
 			return this;
 		}
 
-		public Builder countOf010(int count) {
+		public Builder co010(int count) {
 			count_of_010 = count;
 			return this;
 		}
 
-		public Builder countOf005(int count) {
+		public Builder co005(int count) {
 			count_of_005 = count;
 			return this;
 		}
 
-		public Builder countOf001(int count) {
+		public Builder co001(int count) {
 			count_of_001 = count;
 			return this;
 		}
