@@ -8,6 +8,7 @@ import org.junit.Test;
 
 
 public class PurseTest {
+	HowToPay payment;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -19,6 +20,7 @@ public class PurseTest {
 
 	@Before
 	public void setUp() throws Exception {
+		payment = new HowToPay1();
 	}
 
 	@After
@@ -27,7 +29,7 @@ public class PurseTest {
 
 	@Test
 	public void testPay() {
-		Purse purse = new Purse.Builder().co500(1).co100(4).co050(3).co010(9).co005(1).co001(4).build();
+		Purse purse = new Purse.Builder().co500(1).co100(4).co050(3).co010(9).co005(1).co001(4).payment(payment).build();
 		assertEquals(1, purse.pay(500));
 		assertEquals(1, purse.pay(100));
 		assertEquals(1, purse.pay(50));

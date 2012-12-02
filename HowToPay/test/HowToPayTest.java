@@ -19,7 +19,7 @@ public class HowToPayTest  {
 
 	@Before
 	public void setUp() throws Exception {
-		payment = new HowToPlay1();
+		payment = new HowToPay1();
 	}
 
 	@After

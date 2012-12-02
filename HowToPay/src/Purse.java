@@ -5,6 +5,7 @@ public class Purse {
 	private final int count_of_010;
 	private final int count_of_005;
 	private final int count_of_001;
+	private final HowToPay payment;
 
 	public static class Builder {
 		private int count_of_500 = 0;
@@ -13,6 +14,7 @@ public class Purse {
 		private int count_of_010 = 0;
 		private int count_of_005 = 0;
 		private int count_of_001 = 0;
+		private HowToPay payment = null;
 
 		public Builder co500(int count) {
 			count_of_500 = count;
@@ -43,6 +45,11 @@ public class Purse {
 			count_of_001 = count;
 			return this;
 		}
+		
+		public Builder payment(HowToPay payment) {
+			this.payment = payment;
+			return this;
+		}
 
 		public Purse build() {
 			return new Purse(this);
@@ -56,28 +63,13 @@ public class Purse {
 		count_of_010 = builder.count_of_010;
 		count_of_005 = builder.count_of_005;
 		count_of_001 = builder.count_of_001;
+		payment = builder.payment;
 	}
-	
-	private int sum;
-	private int remainder;
 	
 	public int pay(int money) {
-		sum = 0;
-		remainder = money;
 		int values[] = { 500, 100, 50, 10, 5, 1 };
 		int nums[] = { count_of_500, count_of_100, count_of_050, count_of_010, count_of_005, count_of_001 };
-		for(int i = 0; i < values.length; ++i)
-		{
-			payWith(values[i], nums[i]);
-		}
-		
-		return sum;
-	}
-	
-	private void payWith(int value, int num)
-	{
-		int count = Math.min(remainder / value, num);
-		sum += count;
-		remainder -= count * value;
+
+		return payment.payWithCoins(values, nums, money);
 	}
 }
