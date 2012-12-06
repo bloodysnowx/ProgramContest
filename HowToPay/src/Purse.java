@@ -45,7 +45,7 @@ public class Purse {
 			count_of_001 = count;
 			return this;
 		}
-		
+
 		public Builder payment(HowToPay payment) {
 			this.payment = payment;
 			return this;
@@ -65,10 +65,11 @@ public class Purse {
 		count_of_001 = builder.count_of_001;
 		payment = builder.payment;
 	}
-	
+
 	public int pay(int money) {
-		int values[] = { 500, 100, 50, 10, 5, 1 };
-		int nums[] = { count_of_500, count_of_100, count_of_050, count_of_010, count_of_005, count_of_001 };
+		final int values[] = { 500, 100, 50, 10, 5, 1 };
+		final int nums[] = { count_of_500, count_of_100, count_of_050,
+				count_of_010, count_of_005, count_of_001 };
 
 		return payment.payWithCoins(values, nums, money);
 	}
