@@ -1,8 +1,11 @@
-1. 他と影響せずに選択できるものは確定で選択
-2. 他よりも明らかに不利なもの(ある1つの仕事よりも開始が早く、終了が遅い)は確定で選択
-3. 
+1. 他と影響せずに選択できるものは確定で選択 -> classify, isSettled
+2. 他よりも明らかに不利なもの(ある1つの仕事よりも開始が早く、終了が遅い)は確定で除外 -> reduce, isUseless
+3. 重なりのある仕事群のi番目とj番目が重なっているかどうかを計算し、保存する -> calcSwamped
+4. 重なりのある仕事群を含んだ組み合わせを削除する -> reduceSwamped
+5. 重なりのない仕事群の中で仕事の数が最も多いものを出力する -> 
 
 TimeTableを管理するクラス -> TimeTable(Builderパターン)
+TimeTable上の1つの仕事 -> Job
 TimeTableから最適な仕事を出力するクラス -> Secretary
 アルゴリズムのクラス -> HowToChoose
 実際に使用するクラス -> ChiefExecutiveOfficer
