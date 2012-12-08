@@ -28,6 +28,10 @@ public class Timetable {
 			return this;
 		}
 		
+		public Builder Add(int start, int end) {
+			return this.Add(new Job(start, end));
+		}
+		
 		public Timetable build() {
 			return new Timetable(this);
 		}

@@ -16,7 +16,7 @@ public class HowToChoose1 implements HowToChoose {
 		List<Job> chosen = choose(choices);
 		return new Timetable.Builder().Add(settledJobs).Add(chosen).build();
 	}
-	
+	/** メンバ配列の初期化 */
 	private void reset() {
 		settledJobs.clear();
 		choices.clear();
