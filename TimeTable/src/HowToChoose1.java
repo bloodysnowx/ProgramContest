@@ -99,7 +99,7 @@ public class HowToChoose1 implements HowToChoose {
 	private boolean isNoSwamped(int combination, boolean[][] swamped) {
 		for(int i = 0; i < getBitLength(combination); ++i) {
 			if(((combination >> i) & 1) == 0) continue;
-			for(int j = i + 1; j < Math.ceil(Math.log(combination) / Math.log(2)); ++j) {
+			for(int j = i + 1; j < getBitLength(combination); ++j) {
 				if(((combination >> j) & 1) == 0) continue;
 				if(swamped[i][j]) return false;
 			}
