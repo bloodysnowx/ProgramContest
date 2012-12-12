@@ -9,3 +9,8 @@ TimeTable上の1つの仕事 -> Job
 TimeTableから最適な仕事を出力するクラス -> Secretary
 アルゴリズムのクラス -> HowToChoose
 実際に使用するクラス -> ChiefExecutiveOfficer
+
+-----------------
+
+1. 仕事を終了時間でソートする
+2. 選択可能で一番早く終る仕事から片付けていく
