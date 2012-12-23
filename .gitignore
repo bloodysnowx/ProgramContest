@@ -4,3 +4,5 @@
 */TestResults/*
 */obj/*
 *.exe
+*/Debug/*
+*/*/Debug/*
