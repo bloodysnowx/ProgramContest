@@ -2,7 +2,7 @@ public class CountDisplay extends Display {
     public CountDisplay(DisplayImpl impl) {
         super(impl);
     }
-    public void multiDisplay(int times) {       // times‰ñŒJ‚è•Ô‚µ‚Ä•\¦‚·‚é
+    public void multiDisplay(int times) {       // timeså›ç¹°ã‚Šè¿”ã—ã¦è¡¨ç¤ºã™ã‚‹
         open();
         for (int i = 0; i < times; i++) {
             print();
