@@ -7,5 +7,7 @@ public class Main {
         d2.display();
         d3.display();
         d3.multiDisplay(5);
+        IncreaseDisplay d4 = new IncreaseDisplay(new CharDisplayImpl('<', '-', '>'));
+        d4.increaseDisplay(3);
     }
 }
