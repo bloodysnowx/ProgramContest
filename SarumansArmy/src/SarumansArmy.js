@@ -1,5 +1,5 @@
-SarumansArmy = {};
-SarumansArmy.Solver = function(){ };
-SarumansArmy.Solver.prototype.solve = function(name){
-    return "Hello " + name + "!";
+var Solver = { 
+  solve: function(points, R) {
+    return 0;
+  }
 };
