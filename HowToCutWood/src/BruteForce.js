@@ -1,0 +1,4 @@
+var BruteForceSolver = {
+    solve: function() {
+    }
+};
