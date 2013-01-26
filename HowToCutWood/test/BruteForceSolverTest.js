@@ -51,9 +51,5 @@ TestCase("BruteForceSolverTest", {
     "test countOfUse 5 should return [[4,4,3,2,1],[3,3,3,3,1],[3,3,2,2,2]]": function() {
 	    var result = this.solver.countOfUse(5);
 	    assertEquals([[4,4,3,2,1],[3,3,3,3,1],[3,3,2,2,2]], result);
-    },
-
-    "test solve [5, 8, 8] should return 34": function() {
-	assertEquals(34, this.solver.solve([5, 8, 8]));
     }
 });

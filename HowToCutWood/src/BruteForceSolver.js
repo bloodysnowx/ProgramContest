@@ -1,5 +1,5 @@
 var BruteForceSolver = {
-    cache: {},
+    cache: [null, [[0]], [[1,1]],[[2,2,1]],[[3,3,2,1],[2,2,2,2]]],
     solve: function(points) {
 	    var counts = this.countOfUse(points.length);
         var costs = new Array();
@@ -32,20 +32,21 @@ var BruteForceSolver = {
         return result;
     },
     countOfUse: function(length) {
-	    if(length <= 1) return [[0]];
-	    else if(length == 2) return [[1,1]];
-	    else if(length == 3) return [[2,2,1]];
-	    else if(length == 4) return [[3,3,2,1],[2,2,2,2]];
-        else
+        if(!this.cache[length])
         {
-            // 配列の配列を用意する
-            var result = new Array();
-            // length のカットの仕方
-            for(var i = length - 1; i >= length / 2; --i)
+	        if(length <= 0) return null;
+            else
             {
-                result = result.concat(this.makeComposition(this.countOfUse(i), this.countOfUse(length - i)));
+                // 配列の配列を用意する
+                var result = new Array();
+                // length のカットの仕方
+                for(var i = length - 1; i >= length / 2; --i)
+                {
+                    result = result.concat(this.makeComposition(this.countOfUse(i), this.countOfUse(length - i)));
+                }
+                this.cache[length] = result;
             }
-            return result;
         }
+        return this.cache[length];
     }
 };
