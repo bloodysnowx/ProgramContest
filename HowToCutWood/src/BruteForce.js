@@ -1,7 +1,16 @@
 var BruteForceSolver = {
     cache: {},
     solve: function(points) {
-	
+	    var counts = this.countOfUse(points.length);
+        var costs = new Array();
+        for(var i = 0; i < counts.length; ++i)
+        {
+            var cost = 0;
+            for(var j = 0; j < counts[i].length; ++j)
+                cost += points[j] * counts[i][j];
+            costs.push(cost);
+        }
+        return Math.min.apply(null, costs);
     },
     makeComposition: function(a, b) {
         var result = new Array();
@@ -34,7 +43,7 @@ var BruteForceSolver = {
             // length のカットの仕方
             for(var i = length - 1; i >= length / 2; --i)
             {
-                result.concat(makeComposition(countOfUse(i), countOfUse(length - i)));
+                result = result.concat(this.makeComposition(this.countOfUse(i), this.countOfUse(length - i)));
             }
             return result;
         }
