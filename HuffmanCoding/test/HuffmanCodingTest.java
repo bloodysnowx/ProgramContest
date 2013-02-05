@@ -29,16 +29,20 @@ public class HuffmanCodingTest {
 
 	@Test
 	public void testCompress() {
-		byte[] src = "aabbab".getBytes();
-		byte[] expected = "a=0,b=1;001101".getBytes();		
-		assertEquals(expected, src);
+		String src = "aabbab";
+		String expected = "a=0,b=1;001101";
+		assertEquals(expected, coding.compress(src));
 	}
 
 	@Test
 	public void testDeCompress() {
-		byte[] src = "a=0,b=1;001101".getBytes();
-		byte[] expected = "aabbab".getBytes();
-		assertEquals(expected, src);
+		String src = "a=0,b=1;001101";
+		String expected = "aabbab";
+		assertEquals(expected, coding.deCompress(src));
+		
+		src = "a=1,b=01,c=000,d=001;11111101111001000";
+		expected = "aaaaaabaaadc";
+		assertEquals(expected, coding.deCompress(src));
 	}
 
 }
