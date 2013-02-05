@@ -8,6 +8,7 @@ import org.junit.Test;
 
 
 public class HuffmanCodingTest {
+	private Coding coding;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -19,6 +20,7 @@ public class HuffmanCodingTest {
 
 	@Before
 	public void setUp() throws Exception {
+		coding = new HuffmanCoding();
 	}
 
 	@After
@@ -27,12 +29,16 @@ public class HuffmanCodingTest {
 
 	@Test
 	public void testCompress() {
-		fail("Not yet implemented");
+		byte[] src = "aabbab".getBytes();
+		byte[] expected = "a=0,b=1;001101".getBytes();		
+		assertEquals(expected, src);
 	}
 
 	@Test
 	public void testDeCompress() {
-		fail("Not yet implemented");
+		byte[] src = "a=0,b=1;001101".getBytes();
+		byte[] expected = "aabbab".getBytes();
+		assertEquals(expected, src);
 	}
 
 }
