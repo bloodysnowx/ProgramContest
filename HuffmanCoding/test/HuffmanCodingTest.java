@@ -30,8 +30,21 @@ public class HuffmanCodingTest {
 	@Test
 	public void testCompress() {
 		String src = "aabbab";
-		String expected = "a=0,b=1;001101";
-		assertEquals(expected, coding.compress(src));
+		String expectedA = "a=0,b=1;001101";
+		String expectedB = "a=1,b=0;110010";
+		String result = coding.compress(src);
+		assertTrue(result.equals(expectedA) || result.equals(expectedB));
+		
+		src = "aaabbab";
+		String expected = "a=1,b=0;1110010";
+		result = coding.compress(src);
+		assertEquals(expected, result);
+		
+		src = "aaaaaabaaadcbb";
+		expectedA = "a=1,b=01,c=000,d=001;111111011110010000101";
+		expectedB = "a=1,b=01,c=001,d=000;111111011110000010101";
+		result = coding.compress(src);
+		assertTrue(result.equals(expectedA) || result.equals(expectedB));
 	}
 
 	@Test
