@@ -10,6 +10,7 @@
 #import <iostream>
 #import "KnapsackSolver.h"
 #import "RecursiveKnapsackSolver.h"
+#import "MemoKnapsackSolver.h"
 
 int main(int argc, const char * argv[])
 {
@@ -51,6 +52,7 @@ int main(int argc, const char * argv[])
             9,  9,  9,  9,  9, 10, 10, 10, 10, 10,
         };
         STONE_COUNT = sizeof(weights2) / sizeof(weights2[0]);
+        // STONE_COUNT = ;
         result = solver->solve(max_weight, weights2, values2, STONE_COUNT);
         
         delete solver;
@@ -67,6 +69,17 @@ int main(int argc, const char * argv[])
         
         STONE_COUNT = 25;
         solver = new RecursiveKnapsackSolver(max_weight, weights2, values2, STONE_COUNT);
+        calc_count = 1;
+        NSLog(@"start solve %d", calc_count);
+        date = [NSDate date];
+        for(int i = 0; i < calc_count; ++i)
+            result = solver->solve();
+        elapsed = [[NSDate date] timeIntervalSinceDate:date];
+        NSLog(@"answer = %d, elapsed = %lf", result, elapsed);
+        delete solver;
+        
+        STONE_COUNT = 100;
+        solver = new MemoKnapsackSolver(max_weight, weights2, values2, STONE_COUNT);
         calc_count = 1;
         NSLog(@"start solve %d", calc_count);
         date = [NSDate date];

@@ -21,7 +21,7 @@ int RecursiveKnapsackSolver::solve(int max_weight, int weights[], int values[], 
 {
     if(length == 0) return 0;
     return MAX(solve(max_weight, weights, values, length - 1),
-               solve(max_weight - weights[length - 1], weights, values, length - 1) + values[length - 1]);
+               (max_weight - weights[length - 1] >= 0 ? solve(max_weight - weights[length - 1], weights, values, length - 1) : 0) + values[length - 1]);
 }
 
 int RecursiveKnapsackSolver::solve()
