@@ -46,8 +46,6 @@ int KnapsackSolver::solve(int max_weight, int weights[], int values[], int lengt
     return max_value;
 }
 
-//
-
 KnapsackSolver::KnapsackSolver()
 {
     sums = nullptr;
@@ -56,6 +54,9 @@ KnapsackSolver::KnapsackSolver()
     this->values = nullptr;
     this->length = -1;
 }
+
+//
+
 KnapsackSolver::KnapsackSolver(int max_weight, int weights[], int values[], int length)
 {
     sums = new int*[length + 1];
@@ -84,4 +85,5 @@ KnapsackSolver::~KnapsackSolver()
     for(int i = 0; i < length + 1; ++i)
         delete[] sums[i];
     delete[] sums;
+    NSLog(@"~KnapsackSolver()");
 }

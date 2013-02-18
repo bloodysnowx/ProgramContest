@@ -1,0 +1,38 @@
+//
+//  RecursiveKnapsackSolver.cpp
+//  KnapsackProblem
+//
+//  Created by 岩佐 淳史 on 13/02/19.
+//  Copyright (c) 2013年 岩佐 淳史. All rights reserved.
+//
+
+#include "RecursiveKnapsackSolver.h"
+
+#if !defined(MAX)
+#define MAX(A,B)	({ __typeof__(A) __a = (A); __typeof__(B) __b = (B); __a < __b ? __b : __a; })
+#endif
+
+RecursiveKnapsackSolver::RecursiveKnapsackSolver(int max_weight, int weights[], int values[], int length)
+{
+    this->max_weight = max_weight;
+    this->weights = weights;
+    this->values = values;
+    this->length = length;
+}
+
+int RecursiveKnapsackSolver::solve(int max_weight, int weights[], int values[], int length)
+{
+    if(length == 0) return 0;
+    return MAX(solve(max_weight, weights, values, length - 1),
+               solve(max_weight - weights[length - 1], weights, values, length - 1) + values[length - 1]);
+}
+
+int RecursiveKnapsackSolver::solve()
+{
+    return solve(max_weight, weights, values, length);
+}
+
+RecursiveKnapsackSolver::~RecursiveKnapsackSolver()
+{
+    std::cout << "~RecursiveKnapsackSolver()" << std::endl;
+}

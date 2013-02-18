@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IKnapsackSolver.h"
 
-class KnapsackSolver
+class KnapsackSolver : public IKnapsackSolver
 {
 public:
     KnapsackSolver();
@@ -18,8 +19,4 @@ public:
     int solve(int max_weight, int weights[], int values[], int length);
 private:
     int** sums;
-    int* weights;
-    int* values;
-    int length;
-    int max_weight;
 };
