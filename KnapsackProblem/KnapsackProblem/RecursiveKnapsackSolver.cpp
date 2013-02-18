@@ -12,12 +12,9 @@
 #define MAX(A,B)	({ __typeof__(A) __a = (A); __typeof__(B) __b = (B); __a < __b ? __b : __a; })
 #endif
 
-RecursiveKnapsackSolver::RecursiveKnapsackSolver(int max_weight, int weights[], int values[], int length)
+RecursiveKnapsackSolver::RecursiveKnapsackSolver(int max_weight, int weights[], int values[], int length) : IKnapsackSolver(max_weight, weights, values, length)
 {
-    this->max_weight = max_weight;
-    this->weights = weights;
-    this->values = values;
-    this->length = length;
+    
 }
 
 int RecursiveKnapsackSolver::solve(int max_weight, int weights[], int values[], int length)

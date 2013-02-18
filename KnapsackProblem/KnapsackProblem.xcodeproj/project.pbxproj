@@ -12,6 +12,7 @@
 		0D4355FA16D1B08900F091C7 /* KnapsackProblem.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D4355F916D1B08900F091C7 /* KnapsackProblem.1 */; };
 		0DD924DA16D24AEA0087AF93 /* KnapsackSolver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DD924D916D24AEA0087AF93 /* KnapsackSolver.mm */; };
 		0DD924E016D27BF20087AF93 /* RecursiveKnapsackSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DD924DE16D27BF10087AF93 /* RecursiveKnapsackSolver.cpp */; };
+		0DD924E316D287EA0087AF93 /* MemoKnapsackSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DD924E116D287EA0087AF93 /* MemoKnapsackSolver.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,8 @@
 		0DD924DC16D279C60087AF93 /* IKnapsackSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKnapsackSolver.h; sourceTree = "<group>"; };
 		0DD924DE16D27BF10087AF93 /* RecursiveKnapsackSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecursiveKnapsackSolver.cpp; sourceTree = "<group>"; };
 		0DD924DF16D27BF10087AF93 /* RecursiveKnapsackSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecursiveKnapsackSolver.h; sourceTree = "<group>"; };
+		0DD924E116D287EA0087AF93 /* MemoKnapsackSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MemoKnapsackSolver.cpp; path = ../MemoKnapsackSolver.cpp; sourceTree = "<group>"; };
+		0DD924E216D287EA0087AF93 /* MemoKnapsackSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemoKnapsackSolver.h; path = ../MemoKnapsackSolver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				0DD924DC16D279C60087AF93 /* IKnapsackSolver.h */,
 				0DD924DE16D27BF10087AF93 /* RecursiveKnapsackSolver.cpp */,
 				0DD924DF16D27BF10087AF93 /* RecursiveKnapsackSolver.h */,
+				0DD924E116D287EA0087AF93 /* MemoKnapsackSolver.cpp */,
+				0DD924E216D287EA0087AF93 /* MemoKnapsackSolver.h */,
 			);
 			path = KnapsackProblem;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				0D4355F616D1B08900F091C7 /* main.mm in Sources */,
 				0DD924DA16D24AEA0087AF93 /* KnapsackSolver.mm in Sources */,
 				0DD924E016D27BF20087AF93 /* RecursiveKnapsackSolver.cpp in Sources */,
+				0DD924E316D287EA0087AF93 /* MemoKnapsackSolver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

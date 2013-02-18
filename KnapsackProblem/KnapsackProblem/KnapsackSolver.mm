@@ -57,17 +57,13 @@ KnapsackSolver::KnapsackSolver()
 
 //
 
-KnapsackSolver::KnapsackSolver(int max_weight, int weights[], int values[], int length)
+KnapsackSolver::KnapsackSolver(int max_weight, int weights[], int values[], int length) : IKnapsackSolver(max_weight, weights, values, length)
 {
     sums = new int*[length + 1];
     for(int i = 0; i <= length; ++i)
         sums[i] = new int[max_weight + 1];
     for(int j = 0; j <= max_weight; ++j)
         sums[0][j] = 0;
-    this->max_weight = max_weight;
-    this->weights = weights;
-    this->values = values;
-    this->length = length;
 }
 int KnapsackSolver::solve()
 {

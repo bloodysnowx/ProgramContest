@@ -65,7 +65,7 @@ int main(int argc, const char * argv[])
         NSLog(@"answer = %d, elapsed = %lf", result, elapsed);
         delete solver;
         
-        // STONE_COUNT = 30;
+        STONE_COUNT = 25;
         solver = new RecursiveKnapsackSolver(max_weight, weights2, values2, STONE_COUNT);
         calc_count = 1;
         NSLog(@"start solve %d", calc_count);
