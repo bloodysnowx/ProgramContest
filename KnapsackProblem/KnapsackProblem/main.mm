@@ -52,7 +52,7 @@ int main(int argc, const char * argv[])
             9,  9,  9,  9,  9, 10, 10, 10, 10, 10,
         };
         STONE_COUNT = sizeof(weights2) / sizeof(weights2[0]);
-        // STONE_COUNT = ;
+        // STONE_COUNT = 25;
         result = solver->solve(max_weight, weights2, values2, STONE_COUNT);
         
         delete solver;

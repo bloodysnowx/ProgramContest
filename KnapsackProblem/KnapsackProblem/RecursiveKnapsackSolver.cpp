@@ -20,8 +20,9 @@ RecursiveKnapsackSolver::RecursiveKnapsackSolver(int max_weight, int weights[], 
 int RecursiveKnapsackSolver::solve(int max_weight, int weights[], int values[], int length)
 {
     if(length == 0) return 0;
-    return MAX(solve(max_weight, weights, values, length - 1),
-               (max_weight - weights[length - 1] >= 0 ? solve(max_weight - weights[length - 1], weights, values, length - 1) : 0) + values[length - 1]);
+    int result = solve(max_weight, weights, values, length - 1);
+    if(max_weight - weights[length - 1] > 0) result = MAX(result, solve(max_weight - weights[length - 1], weights, values, length - 1) + values[length - 1]);
+    return result;
 }
 
 int RecursiveKnapsackSolver::solve()
