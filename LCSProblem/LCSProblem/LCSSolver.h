@@ -9,21 +9,20 @@
 #ifndef __LCSProblem__LCSSolver__
 #define __LCSProblem__LCSSolver__
 
-#include <iostream>
-
 class LCSSolver
 {
 public:
-    LCSSolver(char* a, char* b, int a_len, int b_len);
+    LCSSolver(const char* const a, const char* const b, const size_t a_len, const size_t b_len);
     int solve();
     ~LCSSolver();
+    void print();
 private:
-    int solve(char* a, char* b, int a_len, int b_len);
+    int solve(const char* const a, const char* const b, const size_t a_len, const size_t b_len);
     int** lcs_len;
-    char* a;
-    char* b;
-    int a_len;
-    int b_len;
+    const char* const a;
+    const char* const b;
+    size_t a_len;
+    size_t b_len;
 };
 
 

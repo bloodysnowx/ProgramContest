@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D932DF216DA6F2700C01233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D932DF116DA6F2700C01233 /* Foundation.framework */; };
-		0D932DF516DA6F2700C01233 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D932DF416DA6F2700C01233 /* main.m */; };
+		0D932DF516DA6F2700C01233 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D932DF416DA6F2700C01233 /* main.mm */; };
 		0D932DF916DA6F2700C01233 /* LCSProblem.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D932DF816DA6F2700C01233 /* LCSProblem.1 */; };
 		0D932E0116DA6F8A00C01233 /* LCSSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D932DFF16DA6F8A00C01233 /* LCSSolver.cpp */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 /* Begin PBXFileReference section */
 		0D932DEE16DA6F2700C01233 /* LCSProblem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LCSProblem; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D932DF116DA6F2700C01233 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0D932DF416DA6F2700C01233 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0D932DF416DA6F2700C01233 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		0D932DF716DA6F2700C01233 /* LCSProblem-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LCSProblem-Prefix.pch"; sourceTree = "<group>"; };
 		0D932DF816DA6F2700C01233 /* LCSProblem.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LCSProblem.1; sourceTree = "<group>"; };
 		0D932DFF16DA6F8A00C01233 /* LCSSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LCSSolver.cpp; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		0D932DF316DA6F2700C01233 /* LCSProblem */ = {
 			isa = PBXGroup;
 			children = (
-				0D932DF416DA6F2700C01233 /* main.m */,
+				0D932DF416DA6F2700C01233 /* main.mm */,
 				0D932DF816DA6F2700C01233 /* LCSProblem.1 */,
 				0D932DF616DA6F2700C01233 /* Supporting Files */,
 				0D932DFF16DA6F8A00C01233 /* LCSSolver.cpp */,
@@ -144,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D932DF516DA6F2700C01233 /* main.m in Sources */,
+				0D932DF516DA6F2700C01233 /* main.mm in Sources */,
 				0D932E0116DA6F8A00C01233 /* LCSSolver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
