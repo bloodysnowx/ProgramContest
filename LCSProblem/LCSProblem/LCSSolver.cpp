@@ -45,12 +45,21 @@ void LCSSolver::print()
             std::cout << std::setw(2) << lcs_len[i][j] << ' ';
         std::cout << std::endl;
     }
+    /*
+    for(int i = 1; i < a_len + 1; ++i)
+    {
+        if(lcs_len[i-1][b_len] < lcs_len[i][b_len])
+            std::cout << a[i-1] << '@' << i - 1 << ' ';
+    }
+    std::cout << std::endl;
+
     for(int j = 1; j < b_len + 1; ++j)
     {
         if(lcs_len[a_len][j-1] < lcs_len[a_len][j])
-            std::cout << b[j-1];
+            std::cout << b[j-1] << '@' << j - 1 << ' ';
     }
     std::cout << std::endl;
+    */
 }
 
 LCSSolver::~LCSSolver()

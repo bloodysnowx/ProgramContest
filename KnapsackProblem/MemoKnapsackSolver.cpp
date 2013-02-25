@@ -42,12 +42,14 @@ int MemoKnapsackSolver::solve(int max_weight, int weights[], int values[], int l
 int MemoKnapsackSolver::solve()
 {
     int result = solve(max_weight, weights, values, length);
+    /*
     for(int i = 0;  i <= length; ++i)
     {
         for(int j = 0; j <= max_weight; ++j)
             std::cout << sums[i][j] << ' ';
         std::cout << std::endl;
     }
+    */
     return result;
 }
 
@@ -56,5 +58,5 @@ MemoKnapsackSolver::~MemoKnapsackSolver()
     for(int i = 0; i < length + 1; ++i)
         delete[] sums[i];
     delete[] sums;
-    // ::cout << "~MemoKnapsackSolver()" << std::endl;
+    std::cout << "~MemoKnapsackSolver()" << std::endl;
 }

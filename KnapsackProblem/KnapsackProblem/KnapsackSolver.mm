@@ -32,12 +32,14 @@ int KnapsackSolver::solve(int max_weight, int weights[], int values[], int lengt
     int max_value = sums[length][max_weight];
     NSTimeInterval elapsed = [[NSDate date] timeIntervalSinceDate:date];
     NSLog(@"answer = %d, elapsed = %lf", max_value, elapsed);
+
     for(int i = 0; i <= length; ++i)
     {
         for(int j = 0; j <= max_weight; ++j)
             std::cout << sums[i][j] << ' ';
         std::cout << std::endl;
     }
+
 
     for(int i = 0; i < length + 1; ++i)
         delete[] sums[i];

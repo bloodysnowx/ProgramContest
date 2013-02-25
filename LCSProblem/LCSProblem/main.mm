@@ -38,6 +38,8 @@ int main(int argc, const char * argv[])
              "bbbbbbbbbbbbbbbbbbabbbbbbbbbbbbbbbbbbbbbbbbbabbbbbbbbbbbbbbbbbbbbbbbbbbabbbbbbbbbbbbbbbbbbbbbbbbb");
         test("abcdefkgaeoiuaoeiuaoiegjaegja;gja;ioergaoigruajoergija:",
              "awuept0a9uey0@9se6b934n8-bwwbtw45b,w-0e,vre");
+        test("abcdefkgaaopuga0ga@90etq09t8q34t39ghsjb:seoiuaoeiuaoiegjaegja;gja;ioergaoigruajoergija:",
+             "awuept0a9uey0@9se6b934n8-g9u@eogira@ogriljsl:rgja:e;rgja:ergj:aeopig:jo:ergjpae:gjaegijop:bwwbtw45b,w-0e,vre");
     }
     return 0;
 }
