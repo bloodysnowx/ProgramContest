@@ -27,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D43560516DAE5D200F091C7 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		0D932DEE16DA6F2700C01233 /* LCSProblem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LCSProblem; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D932DF116DA6F2700C01233 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0D932DF416DA6F2700C01233 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 				0D932DF616DA6F2700C01233 /* Supporting Files */,
 				0D932DFF16DA6F8A00C01233 /* LCSSolver.cpp */,
 				0D932E0016DA6F8A00C01233 /* LCSSolver.h */,
+				0D43560516DAE5D200F091C7 /* readme.txt */,
 			);
 			path = LCSProblem;
 			sourceTree = "<group>";
@@ -248,6 +250,7 @@
 				0D932DFE16DA6F2700C01233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
