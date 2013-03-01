@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D932E0F16E0E63B00C01233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D932E0E16E0E63B00C01233 /* Foundation.framework */; };
-		0D932E1216E0E63B00C01233 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E1116E0E63B00C01233 /* main.m */; };
+		0D932E1216E0E63B00C01233 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E1116E0E63B00C01233 /* main.mm */; };
 		0D932E1616E0E63B00C01233 /* KnapsackInfiniteProblem.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D932E1516E0E63B00C01233 /* KnapsackInfiniteProblem.1 */; };
 		0D932E1E16E0E6C100C01233 /* KnapsackInfSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E1C16E0E6C100C01233 /* KnapsackInfSolver.cpp */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 /* Begin PBXFileReference section */
 		0D932E0B16E0E63B00C01233 /* KnapsackInfiniteProblem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KnapsackInfiniteProblem; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D932E0E16E0E63B00C01233 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0D932E1116E0E63B00C01233 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0D932E1116E0E63B00C01233 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		0D932E1416E0E63B00C01233 /* KnapsackInfiniteProblem-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KnapsackInfiniteProblem-Prefix.pch"; sourceTree = "<group>"; };
 		0D932E1516E0E63B00C01233 /* KnapsackInfiniteProblem.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = KnapsackInfiniteProblem.1; sourceTree = "<group>"; };
 		0D932E1C16E0E6C100C01233 /* KnapsackInfSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KnapsackInfSolver.cpp; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		0D932E1016E0E63B00C01233 /* KnapsackInfiniteProblem */ = {
 			isa = PBXGroup;
 			children = (
-				0D932E1116E0E63B00C01233 /* main.m */,
+				0D932E1116E0E63B00C01233 /* main.mm */,
 				0D932E1516E0E63B00C01233 /* KnapsackInfiniteProblem.1 */,
 				0D932E1316E0E63B00C01233 /* Supporting Files */,
 				0D932E1C16E0E6C100C01233 /* KnapsackInfSolver.cpp */,
@@ -144,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D932E1216E0E63B00C01233 /* main.m in Sources */,
+				0D932E1216E0E63B00C01233 /* main.mm in Sources */,
 				0D932E1E16E0E6C100C01233 /* KnapsackInfSolver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

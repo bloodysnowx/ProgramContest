@@ -17,13 +17,14 @@ public:
     KnapsackInfSolver(int max_weight, int weights[], int values[], int length);
     int solve();
     int solve(int max_weight, int weights[], int values[], int length);
+    void print();
     ~KnapsackInfSolver();
 private:
     int** sums;
-    private int max_weight;
-    private int* weights;
-    private int* values;
-    private int length;
+    int max_weight;
+    int* weights;
+    int* values;
+    int length;
 };
 
 #endif /* defined(__KnapsackInfiniteProblem__KnapsackInfSolver__) */
