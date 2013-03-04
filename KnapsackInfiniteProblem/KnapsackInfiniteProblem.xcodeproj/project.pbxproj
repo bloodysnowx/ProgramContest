@@ -11,6 +11,7 @@
 		0D932E1216E0E63B00C01233 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E1116E0E63B00C01233 /* main.mm */; };
 		0D932E1616E0E63B00C01233 /* KnapsackInfiniteProblem.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D932E1516E0E63B00C01233 /* KnapsackInfiniteProblem.1 */; };
 		0D932E1E16E0E6C100C01233 /* KnapsackInfSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E1C16E0E6C100C01233 /* KnapsackInfSolver.cpp */; };
+		0DFDC98A16E49BB300EF3E04 /* KnapsackInfiniteSolverZ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDC98816E49BB300EF3E04 /* KnapsackInfiniteSolverZ.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		0D932E1516E0E63B00C01233 /* KnapsackInfiniteProblem.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = KnapsackInfiniteProblem.1; sourceTree = "<group>"; };
 		0D932E1C16E0E6C100C01233 /* KnapsackInfSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KnapsackInfSolver.cpp; sourceTree = "<group>"; };
 		0D932E1D16E0E6C100C01233 /* KnapsackInfSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnapsackInfSolver.h; sourceTree = "<group>"; };
+		0DFDC98816E49BB300EF3E04 /* KnapsackInfiniteSolverZ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KnapsackInfiniteSolverZ.cpp; sourceTree = "<group>"; };
+		0DFDC98916E49BB300EF3E04 /* KnapsackInfiniteSolverZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnapsackInfiniteSolverZ.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				0D932E1316E0E63B00C01233 /* Supporting Files */,
 				0D932E1C16E0E6C100C01233 /* KnapsackInfSolver.cpp */,
 				0D932E1D16E0E6C100C01233 /* KnapsackInfSolver.h */,
+				0DFDC98816E49BB300EF3E04 /* KnapsackInfiniteSolverZ.cpp */,
+				0DFDC98916E49BB300EF3E04 /* KnapsackInfiniteSolverZ.h */,
 			);
 			path = KnapsackInfiniteProblem;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			files = (
 				0D932E1216E0E63B00C01233 /* main.mm in Sources */,
 				0D932E1E16E0E6C100C01233 /* KnapsackInfSolver.cpp in Sources */,
+				0DFDC98A16E49BB300EF3E04 /* KnapsackInfiniteSolverZ.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +254,7 @@
 				0D932E1B16E0E63B00C01233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
