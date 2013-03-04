@@ -17,6 +17,7 @@ KnapsackInfSolverZ::KnapsackInfSolverZ(int max_weight, int weights[], int values
     this->length = length;
     
     sums = new int[max_weight + 1];
+    stones = new stone[length];
 }
 
 int KnapsackInfSolverZ::solve()
@@ -51,4 +52,5 @@ void KnapsackInfSolverZ::print()
 KnapsackInfSolverZ::~KnapsackInfSolverZ()
 {
     delete[] sums;
+    delete[] stones;
 }
