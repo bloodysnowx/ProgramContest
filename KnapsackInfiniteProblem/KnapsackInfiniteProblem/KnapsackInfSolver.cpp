@@ -16,13 +16,7 @@ KnapsackInfSolver::KnapsackInfSolver(int max_weight, int weights[], int values[]
     this->values = values;
     this->length = length;
 
-    // i -> weight, j -> item
-    sums = new int*[max_weight + 1];
-    for(int i = 0; i <= max_weight; ++i)
-        // 0 -> @0, 1 -> @1, ... , length-1 -> @length-1, length -> MAX
-        sums[i] = new int[length + 1];
-    for(int j = 0; j <= length; ++j)
-        sums[0][j] = 0;
+    sums = new int[max_weight + 1];
 }
 
 int KnapsackInfSolver::solve()
@@ -37,31 +31,24 @@ int KnapsackInfSolver::solve(int max_weight, int weights[], int values[], int le
         int max = 0;
         for(int j = 0; j < length; ++j)
         {
-            if(weights[j] > i) sums[i][j] = 0;
-            else sums[i][j] = sums[i - weights[j]][length] + values[j];
-            max = MAX(max, sums[i][j]);
+            if(weights[j] > i) continue;
+            else max = MAX(max, sums[i - weights[j]] + values[j]);
         }
-        sums[i][length] = max;
+        sums[i] = max;
     }
     
-    return sums[max_weight][length];
+    return sums[max_weight];
 }
 
 void KnapsackInfSolver::print()
 {
     for(int i = 0; i <= max_weight; ++i)
-    {
-        for(int j = 0; j <= length; ++j)
-        {
-            std::cout << std::setw(2) << sums[i][j] << ' ';
-        }
-        std::cout << std::endl;
-    }
+        std::cout << std::setw(2) << sums[i] << ' ';
+
+    std::cout << std::endl;
 }
 
 KnapsackInfSolver::~KnapsackInfSolver()
 {
-    for(int i = 0; i < max_weight + 1; ++i)
-        delete[] sums[i];
     delete[] sums;
 }

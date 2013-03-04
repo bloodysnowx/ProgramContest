@@ -20,7 +20,7 @@ public:
     void print();
     ~KnapsackInfSolver();
 private:
-    int** sums;
+    int* sums;
     int max_weight;
     int* weights;
     int* values;
