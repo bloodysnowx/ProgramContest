@@ -17,6 +17,7 @@ KnapsackInfSolver::KnapsackInfSolver(int max_weight, int weights[], int values[]
     this->length = length;
 
     sums = new int[max_weight + 1];
+    sums[0] = 0;
 }
 
 int KnapsackInfSolver::solve()
