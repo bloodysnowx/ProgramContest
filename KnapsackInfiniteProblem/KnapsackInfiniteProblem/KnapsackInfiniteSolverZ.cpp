@@ -7,7 +7,17 @@
 //
 
 #include "KnapsackInfiniteSolverZ.h"
-#include "iomanip"
+#include <iomanip>
+#include <algorithm>
+#include <functional>
+
+class Sorter {
+public:
+    bool operator()(const stone& riLeft, const stone& riRight) const {
+        if (riLeft.value * riRight.weight == riRight.value * riLeft.weight) return riLeft.weight < riRight.weight;
+        return riLeft.value * riRight.weight > riRight.value * riLeft.weight;
+    }
+};
 
 KnapsackInfSolverZ::KnapsackInfSolverZ(int max_weight, int weights[], int values[], int length)
 {
@@ -18,6 +28,9 @@ KnapsackInfSolverZ::KnapsackInfSolverZ(int max_weight, int weights[], int values
     
     sums = new int[max_weight + 1];
     stones = new stone[length];
+    for(int i = 0; i < length; ++i)
+        stones[i] = stone{weights[i], values[i], (float)values[i] / weights[i]};
+    std::sort(stones, stones + length, Sorter());
 }
 
 int KnapsackInfSolverZ::solve()

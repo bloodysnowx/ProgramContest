@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KnapsackInfSolver.h"
+#import "KnapsackInfiniteSolverZ.h"
 #import <iostream>
 
 int main(int argc, const char * argv[])
@@ -54,6 +55,11 @@ int main(int argc, const char * argv[])
         result = solver->solve();
         solver->print();
         delete solver;
+        
+        KnapsackInfSolverZ* solverZ = new KnapsackInfSolverZ(max_weight, weights2, values2, STONE_COUNT);
+        result = solverZ->solve();
+        solverZ->print();
+        delete solverZ;
     }
     return 0;
 }
