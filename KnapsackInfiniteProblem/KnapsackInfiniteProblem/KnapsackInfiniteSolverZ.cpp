@@ -27,10 +27,21 @@ KnapsackInfSolverZ::KnapsackInfSolverZ(int max_weight, int weights[], int values
     this->length = length;
     
     sums = new int[max_weight + 1];
+    sums[0]= 0;
+    for(int i = 1; i <= max_weight; ++i)
+        sums[i] = -1;
+
     stones = new stone[length];
     for(int i = 0; i < length; ++i)
         stones[i] = stone{weights[i], values[i], (float)values[i] / weights[i]};
     std::sort(stones, stones + length, Sorter());
+    
+    for(int i = 1; i * stones[0].weight <= max_weight; ++i)
+    {
+        sums[i * stones[0].weight] = stones[0].value * i;
+        if(length >= 2 && i * stones[0].weight + stones[1].weight <= max_weight)
+            sums[i * stones[0].weight + stones[1].weight] = sums[i * stones[0].weight] + stones[1].value;
+    }
 }
 
 int KnapsackInfSolverZ::solve()
@@ -40,8 +51,11 @@ int KnapsackInfSolverZ::solve()
 
 int KnapsackInfSolverZ::solve(int max_weight, int weights[], int values[], int length)
 {
+    if(sums[max_weight] >= 0) return sums[max_weight];
+    
     for(int i = 1; i <= max_weight; ++i)
     {
+        if(sums[i] >= 0) continue;
         int max = 0;
         for(int j = 0; j < length; ++j)
         {
