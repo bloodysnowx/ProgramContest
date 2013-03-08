@@ -16,3 +16,11 @@ Answer(x, 0) = 0
 Answer(x, 1) = ...
 ...
 Answer(x, m) = ...
+
+
+-----
+
+Answer(x) = Solve(x, a1, ... , am, n1, ... , nm)
+
+dp[i + 1][j] = mi(dp[i][j]>=0) or -1(j<ai or dp[i+1][j-ai] <= 0) or dp[i + 1][j - ai] - 1
+

@@ -11,6 +11,7 @@
 		0D8B492216E9E53400610484 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B492116E9E53400610484 /* main.mm */; };
 		0D8B492616E9E53400610484 /* PartSumProblem.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D8B492516E9E53400610484 /* PartSumProblem.1 */; };
 		0D8B492E16E9E54900610484 /* PartSumSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B492C16E9E54900610484 /* PartSumSolver.cpp */; };
+		0D8B493216EA030B00610484 /* PartSumSolverZ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B493016EA030B00610484 /* PartSumSolverZ.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,8 @@
 		0D8B492C16E9E54900610484 /* PartSumSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PartSumSolver.cpp; sourceTree = "<group>"; };
 		0D8B492D16E9E54900610484 /* PartSumSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartSumSolver.h; sourceTree = "<group>"; };
 		0D8B492F16E9ECA000610484 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		0D8B493016EA030B00610484 /* PartSumSolverZ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PartSumSolverZ.cpp; sourceTree = "<group>"; };
+		0D8B493116EA030B00610484 /* PartSumSolverZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartSumSolverZ.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				0D8B492316E9E53400610484 /* Supporting Files */,
 				0D8B492C16E9E54900610484 /* PartSumSolver.cpp */,
 				0D8B492D16E9E54900610484 /* PartSumSolver.h */,
+				0D8B493016EA030B00610484 /* PartSumSolverZ.cpp */,
+				0D8B493116EA030B00610484 /* PartSumSolverZ.h */,
 			);
 			path = PartSumProblem;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			files = (
 				0D8B492216E9E53400610484 /* main.mm in Sources */,
 				0D8B492E16E9E54900610484 /* PartSumSolver.cpp in Sources */,
+				0D8B493216EA030B00610484 /* PartSumSolverZ.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
