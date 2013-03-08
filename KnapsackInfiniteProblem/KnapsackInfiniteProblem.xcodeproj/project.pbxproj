@@ -28,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D8B491116E9C11F00610484 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		0D932E0B16E0E63B00C01233 /* KnapsackInfiniteProblem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KnapsackInfiniteProblem; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D932E0E16E0E63B00C01233 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0D932E1116E0E63B00C01233 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 				0D932E1D16E0E6C100C01233 /* KnapsackInfSolver.h */,
 				0DFDC98816E49BB300EF3E04 /* KnapsackInfiniteSolverZ.cpp */,
 				0DFDC98916E49BB300EF3E04 /* KnapsackInfiniteSolverZ.h */,
+				0D8B491116E9C11F00610484 /* readme.txt */,
 			);
 			path = KnapsackInfiniteProblem;
 			sourceTree = "<group>";
