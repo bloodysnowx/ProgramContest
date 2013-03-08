@@ -7,6 +7,7 @@
 //
 
 #include "PartSumSolver.h"
+#include <iomanip>
 
 PartSumSolver::PartSumSolver(int target, int values[], int counts[], int length)
 {
@@ -55,9 +56,9 @@ void PartSumSolver::print()
 {
      for(int i = 0;  i <= target; ++i)
      {
-         std::cout << i << " : ";
+         std::cout << std::setw(4) << i << " : ";
          for(int j = 0; j <= length; ++j)
-             std::cout << result[i][j] << ' ';
+             std::cout << std::setw(2) << result[i][j] << ' ';
          std::cout << std::endl;
      }
 }
