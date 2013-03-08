@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D8B491F16E9E53400610484 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B491E16E9E53400610484 /* Foundation.framework */; };
-		0D8B492216E9E53400610484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B492116E9E53400610484 /* main.m */; };
+		0D8B492216E9E53400610484 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B492116E9E53400610484 /* main.mm */; };
 		0D8B492616E9E53400610484 /* PartSumProblem.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D8B492516E9E53400610484 /* PartSumProblem.1 */; };
 		0D8B492E16E9E54900610484 /* PartSumSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B492C16E9E54900610484 /* PartSumSolver.cpp */; };
 /* End PBXBuildFile section */
@@ -29,11 +29,12 @@
 /* Begin PBXFileReference section */
 		0D8B491B16E9E53400610484 /* PartSumProblem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PartSumProblem; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8B491E16E9E53400610484 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0D8B492116E9E53400610484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0D8B492116E9E53400610484 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		0D8B492416E9E53400610484 /* PartSumProblem-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PartSumProblem-Prefix.pch"; sourceTree = "<group>"; };
 		0D8B492516E9E53400610484 /* PartSumProblem.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = PartSumProblem.1; sourceTree = "<group>"; };
 		0D8B492C16E9E54900610484 /* PartSumSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PartSumSolver.cpp; sourceTree = "<group>"; };
 		0D8B492D16E9E54900610484 /* PartSumSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartSumSolver.h; sourceTree = "<group>"; };
+		0D8B492F16E9ECA000610484 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 		0D8B491216E9E53400610484 = {
 			isa = PBXGroup;
 			children = (
+				0D8B492F16E9ECA000610484 /* readme.txt */,
 				0D8B492016E9E53400610484 /* PartSumProblem */,
 				0D8B491D16E9E53400610484 /* Frameworks */,
 				0D8B491C16E9E53400610484 /* Products */,
@@ -76,7 +78,7 @@
 		0D8B492016E9E53400610484 /* PartSumProblem */ = {
 			isa = PBXGroup;
 			children = (
-				0D8B492116E9E53400610484 /* main.m */,
+				0D8B492116E9E53400610484 /* main.mm */,
 				0D8B492516E9E53400610484 /* PartSumProblem.1 */,
 				0D8B492316E9E53400610484 /* Supporting Files */,
 				0D8B492C16E9E54900610484 /* PartSumSolver.cpp */,
@@ -144,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D8B492216E9E53400610484 /* main.m in Sources */,
+				0D8B492216E9E53400610484 /* main.mm in Sources */,
 				0D8B492E16E9E54900610484 /* PartSumSolver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

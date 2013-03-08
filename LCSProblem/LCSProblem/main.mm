@@ -25,14 +25,16 @@ int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
+
         test("abc", "cba");
         test("abcd", "bcde");
+        test("abcd", "becd");
         test("ABCBDAB", "BDCABA");
         test("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
              "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
         test("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
              "bbbbbbbbbbbbbabbbbbbbbbbbbbbbbbbbbbabbbbbbbbbbbbbbbb");
-        test("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        /*test("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
              "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
         test("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
              "bbbbbbbbbbbbbbbbbbabbbbbbbbbbbbbbbbbbbbbbbbbabbbbbbbbbbbbbbbbbbbbbbbbbbabbbbbbbbbbbbbbbbbbbbbbbbb");
@@ -40,6 +42,8 @@ int main(int argc, const char * argv[])
              "awuept0a9uey0@9se6b934n8-bwwbtw45b,w-0e,vre");
         test("abcdefkgaaopuga0ga@90etq09t8q34t39ghsjb:seoiuaoeiuaoiegjaegja;gja;ioergaoigruajoergija:",
              "awuept0a9uey0@9se6b934n8-g9u@eogira@ogriljsl:rgja:e;rgja:ergj:aeopig:jo:ergjpae:gjaegijop:bwwbtw45b,w-0e,vre");
+    */test("abcdefkgaaopuga0ga@90etq09t8q34t39ghsjb:seoiuaoaioerta@ogjalrgja;ieja;logh:weirgt;o9erghaew:rigaer:pg:jergjergijoper;ghergje@09tuw-30457234tgoezl:rgeifilapo4t;aowt;aeworigpae9f;eowtuqw4uaoiegjaegja;gja;ioergaoigruajoergija:",
+         "awuept0a9uey0@9se6b934n8g9u@eogisidfhapw;etyq@9w8rtyqp394tyq34poth@3490tra@ogriljsl:rgja:e;q49tuporghpaeortu;eorg;eoirgup0eutergj:eaprg;wo4itg;erijg;erigjesriug3r8tupew9rgu@ewrgja:ergj:aeopig:jo:ergjpae:gjaegijop:bwwbtw45b,w-0e,vre");
     }
     return 0;
 }
