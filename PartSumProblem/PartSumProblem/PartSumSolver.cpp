@@ -9,13 +9,8 @@
 #include "PartSumSolver.h"
 #include <iomanip>
 
-PartSumSolver::PartSumSolver(int target, int values[], int counts[], int length)
+PartSumSolver::PartSumSolver(int target, int values[], int counts[], int length) : IPartSumSolver(target, values, counts, length)
 {
-    this->target = target;
-    this->values = values;
-    this->counts = counts;
-    this->length = length;
-    
     // i : targetWeight, j : number
     this->result = new int*[target + 1];
     for(int i = 0; i <= target; ++i)

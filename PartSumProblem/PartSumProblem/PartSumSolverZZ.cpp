@@ -6,15 +6,10 @@
 //  Copyright (c) 2013年 岩佐 淳史. All rights reserved.
 //
 
-#include "PartSumSolverZ.h"
+#include "PartSumSolverZZ.h"
 
-PartSumSolverZZ::PartSumSolverZZ(int target, int values[], int counts[], int length)
+PartSumSolverZZ::PartSumSolverZZ(int target, int values[], int counts[], int length) : IPartSumSolver(target, values, counts, length)
 {
-    this->target = target;
-    this->values = values;
-    this->counts = counts;
-    this->length = length;
-    
     this->result = new int[target + 1];
     this->result[0] = 0;
     for(int i = 1; i <= target; ++i) this->result[i] = -1;

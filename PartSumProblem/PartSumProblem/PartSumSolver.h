@@ -10,8 +10,9 @@
 #define __PartSumProblem__PartSumSolver__
 
 #include <iostream>
+#include "IPartSumSolver.h"
 
-class PartSumSolver
+class PartSumSolver : public IPartSumSolver
 {
 public:
     PartSumSolver(int target, int values[], int counts[], int length);
@@ -21,9 +22,5 @@ public:
     ~PartSumSolver();
 private:
     int** result;
-    int target;
-    int* values;
-    int* counts;
-    int length;
 };
 #endif /* defined(__PartSumProblem__PartSumSolver__) */
