@@ -11,14 +11,14 @@
 
 #include <iostream>
 
-class PartSumSolverZ
+class PartSumSolverZZ
 {
 public:
-    PartSumSolverZ(int target, int values[], int counts[], int length);
+    PartSumSolverZZ(int target, int values[], int counts[], int length);
     bool solve();
     bool solve(int target, int values[], int counts[], int length);
     void print();
-    ~PartSumSolverZ();
+    ~PartSumSolverZZ();
 private:
     int* result;
     int target;

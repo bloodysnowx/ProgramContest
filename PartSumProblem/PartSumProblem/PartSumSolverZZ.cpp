@@ -8,7 +8,7 @@
 
 #include "PartSumSolverZ.h"
 
-PartSumSolverZ::PartSumSolverZ(int target, int values[], int counts[], int length)
+PartSumSolverZZ::PartSumSolverZZ(int target, int values[], int counts[], int length)
 {
     this->target = target;
     this->values = values;
@@ -20,12 +20,12 @@ PartSumSolverZ::PartSumSolverZ(int target, int values[], int counts[], int lengt
     for(int i = 1; i <= target; ++i) this->result[i] = -1;
 }
 
-bool PartSumSolverZ::solve()
+bool PartSumSolverZZ::solve()
 {
     return solve(target, values, counts, length);
 }
 
-bool PartSumSolverZ::solve(int target, int values[], int counts[], int length)
+bool PartSumSolverZZ::solve(int target, int values[], int counts[], int length)
 {
     // dp[i + 1][j] = mi(dp[i][j]>=0) or -1(j<ai or dp[i+1][j-ai] <= 0) or dp[i + 1][j - ai] - 1
     for(int j = 1; j <= length; ++j)
@@ -40,13 +40,13 @@ bool PartSumSolverZ::solve(int target, int values[], int counts[], int length)
     return this->result[target] >= 0;
 }
 
-void PartSumSolverZ::print()
+void PartSumSolverZZ::print()
 {
     for(int i = 0;  i <= target; ++i)
         std::cout << result[i] << ' ';
 }
 
-PartSumSolverZ::~PartSumSolverZ()
+PartSumSolverZZ::~PartSumSolverZZ()
 {
     delete[] this->result;
 }
