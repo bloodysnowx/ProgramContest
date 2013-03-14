@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "PartSumSolver.h"
 #import "PartSumSolverZ.h"
+#import "PartSumSolverZZ.h"
+
+IPartSumSolver* create(int target, int values[], int counts[], int length)
+{
+    return new PartSumSolverZ(target, values, counts, length);
+}
 
 int main(int argc, const char * argv[])
 {
@@ -20,7 +26,7 @@ int main(int argc, const char * argv[])
         int values[] = { 3, 5, 8 };
         int counts[] = { 3, 2, 2 };
         int length = sizeof(values) / sizeof(values[0]);
-        PartSumSolverZ* solver = new PartSumSolverZ(target, values, counts, length);
+        IPartSumSolver* solver = create(target, values, counts, length);
         // solver->print();
         bool result = solver->solve();
         solver->print();
@@ -28,7 +34,7 @@ int main(int argc, const char * argv[])
         delete solver;
         
         target = 35;
-        solver = new PartSumSolverZ(target, values, counts, length);
+        solver = create(target, values, counts, length);
         // solver->print();
         result = solver->solve();
         solver->print();
@@ -39,7 +45,7 @@ int main(int argc, const char * argv[])
         int values2[] = { 10, 15, 18, 23, 29, 43, 3, 5, 8, 9, };
         int counts2[] = {  1,  1,  1,  1,  1,  1, 3, 2, 2, 5, };
         length = sizeof(values2) / sizeof(values2[0]);
-        solver = new PartSumSolverZ(target, values2, counts2, length);
+        solver = create(target, values2, counts2, length);
         result = solver->solve();
         solver->print();
         NSLog(@"answer = %@", result ? @"true" : @"false");
@@ -71,7 +77,7 @@ int main(int argc, const char * argv[])
             1011, 2121, 3131, 4141, 5151, 6161, 7173, 8182, 9192, 5,
         };
         length = sizeof(values3) / sizeof(values3[0]);
-        solver = new PartSumSolverZ(target, values3, counts3, length);
+        solver = create(target, values3, counts3, length);
         result = solver->solve();
         // solver->print();
         NSLog(@"answer = %@", result ? @"true" : @"false");
