@@ -9,6 +9,10 @@ namespace MakeLessString
     {
         static void Main(string[] args)
         {
+			Console.Write ("enter string:");
+			string name = Console.ReadLine();
+			Solver solver = new Solver();
+			Console.WriteLine (solver.solve (name));
         }
 
         public string solve(string question)
