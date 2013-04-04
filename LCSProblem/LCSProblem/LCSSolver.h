@@ -19,8 +19,8 @@ public:
 private:
     int solve(const T* const a, const T* const b, const size_t a_len, const size_t b_len);
     int** lcs_len;
-    const char* const a;
-    const char* const b;
+    const T* const a;
+    const T* const b;
     size_t a_len;
     size_t b_len;
 };
