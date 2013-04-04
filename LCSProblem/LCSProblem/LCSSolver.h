@@ -9,15 +9,15 @@
 #ifndef __LCSProblem__LCSSolver__
 #define __LCSProblem__LCSSolver__
 
-class LCSSolver
+template <typename T> class LCSSolver
 {
 public:
-    LCSSolver(const char* const a, const char* const b, const size_t a_len, const size_t b_len);
+    LCSSolver(const T* const a, const T* const b, const size_t a_len, const size_t b_len);
     int solve();
     ~LCSSolver();
     void print();
 private:
-    int solve(const char* const a, const char* const b, const size_t a_len, const size_t b_len);
+    int solve(const T* const a, const T* const b, const size_t a_len, const size_t b_len);
     int** lcs_len;
     const char* const a;
     const char* const b;

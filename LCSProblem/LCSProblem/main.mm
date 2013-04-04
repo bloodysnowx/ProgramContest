@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LCSSolver.h"
+#import "LCSSolver.cpp"
 #include <string.h>
 
 void test(const char* a, const char* b)
 {
     size_t a_len = strlen(a);
     size_t b_len = strlen(b);
-    LCSSolver* solver = new LCSSolver(a, b, a_len, b_len);
+    LCSSolver<char>* solver = new LCSSolver<char>(a, b, a_len, b_len);
     int answer = solver->solve();
     solver->print();
     NSLog(@"%d", answer);

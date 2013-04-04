@@ -8,8 +8,9 @@
 
 #include "LCSSolver.h"
 #include <iomanip>
+#include <iostream>
 
-LCSSolver::LCSSolver(const char* const a, const char* const b, const size_t a_len, const size_t b_len) : a(a), b(b), a_len(a_len), b_len(b_len)
+template<typename T> LCSSolver<T>::LCSSolver(const T* const a, const T* const b, const size_t a_len, const size_t b_len) : a(a), b(b), a_len(a_len), b_len(b_len)
 {
     lcs_len = new int*[a_len + 1];
     for(int i = 0; i < a_len + 1; ++i)
@@ -20,12 +21,12 @@ LCSSolver::LCSSolver(const char* const a, const char* const b, const size_t a_le
     }
 }
 
-int LCSSolver::solve()
+template<typename T> int LCSSolver<T>::solve()
 {
     return this->solve(a, b, a_len, b_len);
 }
 
-int LCSSolver::solve(const char* const a, const char* const b, const size_t a_len, const size_t b_len)
+template<typename T> int LCSSolver<T>::solve(const T* const a, const T* const b, const size_t a_len, const size_t b_len)
 {
     for(int i = 1; i < a_len + 1; ++i)
     {
@@ -37,7 +38,7 @@ int LCSSolver::solve(const char* const a, const char* const b, const size_t a_le
     return lcs_len[a_len][b_len];
 }
 
-void LCSSolver::print()
+template<typename T> void LCSSolver<T>::print()
 {
     for(int i = 0; i < a_len + 1; ++i)
     {
@@ -62,7 +63,7 @@ void LCSSolver::print()
     */
 }
 
-LCSSolver::~LCSSolver()
+template<typename T> LCSSolver<T>::~LCSSolver()
 {
     for(int i = 0; i < a_len + 1; ++i)
         delete [] lcs_len[i];
