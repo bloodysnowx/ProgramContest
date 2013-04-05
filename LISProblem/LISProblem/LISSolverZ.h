@@ -21,6 +21,7 @@ public:
 private:
     const int* const a;
     const size_t a_len;
+    int* lis_len;
 };
 
 #endif /* defined(__LISProblem__LISSolverZ__) */

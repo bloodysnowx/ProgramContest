@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "LISSolver.h"
+#import "LISSolverZ.h"
 
 void test(const int* a, size_t a_len)
 {
-    LISSolver* solver = new LISSolver(a, a_len);
+    // LISSolver* solver = new LISSolver(a, a_len);
+    LISSolverZ* solver = new LISSolverZ(a, a_len);
     int answer = solver->solve();
     solver->print();
     NSLog(@"%d", answer);
@@ -22,8 +24,8 @@ int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        const int a[] = {4, 3, 2, 1};
-        test(a, 4);
+        const int a[] = {4, 3, 2, 1, 2, 3, 4};
+        test(a, 7);
     }
     return 0;
 }
