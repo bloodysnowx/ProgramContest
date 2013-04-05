@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0DE6CE3417054A7900E1F33A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE6CE3317054A7900E1F33A /* Foundation.framework */; };
-		0DE6CE3717054A7900E1F33A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6CE3617054A7900E1F33A /* main.m */; };
+		0DE6CE3717054A7900E1F33A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6CE3617054A7900E1F33A /* main.mm */; };
 		0DE6CE3B17054A7900E1F33A /* LISProblem.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DE6CE3A17054A7900E1F33A /* LISProblem.1 */; };
 		0DF783FA170D342600EA274C /* LISSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DF783F8170D342500EA274C /* LISSolver.cpp */; };
+		0DF78401170E87AC00EA274C /* LISSolverZ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DF783FF170E87AC00EA274C /* LISSolverZ.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +30,7 @@
 /* Begin PBXFileReference section */
 		0DE6CE3017054A7900E1F33A /* LISProblem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LISProblem; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE6CE3317054A7900E1F33A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0DE6CE3617054A7900E1F33A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DE6CE3617054A7900E1F33A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		0DE6CE3917054A7900E1F33A /* LISProblem-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LISProblem-Prefix.pch"; sourceTree = "<group>"; };
 		0DE6CE3A17054A7900E1F33A /* LISProblem.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LISProblem.1; sourceTree = "<group>"; };
 		0DE6CE4117054A9E00E1F33A /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
@@ -37,6 +38,8 @@
 		0DF783F7170D340500EA274C /* LCSSolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LCSSolver.h; path = ../../LCSProblem/LCSProblem/LCSSolver.h; sourceTree = "<group>"; };
 		0DF783F8170D342500EA274C /* LISSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LISSolver.cpp; sourceTree = "<group>"; };
 		0DF783F9170D342500EA274C /* LISSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISSolver.h; sourceTree = "<group>"; };
+		0DF783FF170E87AC00EA274C /* LISSolverZ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LISSolverZ.cpp; sourceTree = "<group>"; };
+		0DF78400170E87AC00EA274C /* LISSolverZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISSolverZ.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +82,7 @@
 		0DE6CE3517054A7900E1F33A /* LISProblem */ = {
 			isa = PBXGroup;
 			children = (
-				0DE6CE3617054A7900E1F33A /* main.m */,
+				0DE6CE3617054A7900E1F33A /* main.mm */,
 				0DE6CE3A17054A7900E1F33A /* LISProblem.1 */,
 				0DF783F6170D340500EA274C /* LCSSolver.cpp */,
 				0DF783F7170D340500EA274C /* LCSSolver.h */,
@@ -87,6 +90,8 @@
 				0DE6CE4117054A9E00E1F33A /* readme.txt */,
 				0DF783F8170D342500EA274C /* LISSolver.cpp */,
 				0DF783F9170D342500EA274C /* LISSolver.h */,
+				0DF783FF170E87AC00EA274C /* LISSolverZ.cpp */,
+				0DF78400170E87AC00EA274C /* LISSolverZ.h */,
 			);
 			path = LISProblem;
 			sourceTree = "<group>";
@@ -150,8 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE6CE3717054A7900E1F33A /* main.m in Sources */,
+				0DE6CE3717054A7900E1F33A /* main.mm in Sources */,
 				0DF783FA170D342600EA274C /* LISSolver.cpp in Sources */,
+				0DF78401170E87AC00EA274C /* LISSolverZ.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
