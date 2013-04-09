@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'HowToPart' target in the 'HowToPart' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
