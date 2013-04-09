@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HowToPartSolver.h"
 
 int main(int argc, const char * argv[])
 {
-
     @autoreleasepool {
-        
-        // insert code here...
-        NSLog(@"Hello, World!");
-        
+        HowToPartSolver* solver = new HowToPartSolver(20, 20, 10000);
+        solver->solve();
+        solver->print();
+        delete solver;
     }
     return 0;
 }

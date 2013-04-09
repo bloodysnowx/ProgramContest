@@ -10,6 +10,7 @@
 		0DD2A36E17141C4000E8A7B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD2A36D17141C4000E8A7B4 /* Foundation.framework */; };
 		0DD2A37117141C4000E8A7B4 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DD2A37017141C4000E8A7B4 /* main.mm */; };
 		0DD2A37517141C4000E8A7B4 /* HowToPart.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD2A37417141C4000E8A7B4 /* HowToPart.1 */; };
+		0DD2A37E171427A400E8A7B4 /* HowToPartSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DD2A37C171427A400E8A7B4 /* HowToPartSolver.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		0DD2A37317141C4000E8A7B4 /* HowToPart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HowToPart-Prefix.pch"; sourceTree = "<group>"; };
 		0DD2A37417141C4000E8A7B4 /* HowToPart.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = HowToPart.1; sourceTree = "<group>"; };
 		0DD2A37B17141C5E00E8A7B4 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		0DD2A37C171427A400E8A7B4 /* HowToPartSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HowToPartSolver.cpp; sourceTree = "<group>"; };
+		0DD2A37D171427A400E8A7B4 /* HowToPartSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToPartSolver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				0DD2A37017141C4000E8A7B4 /* main.mm */,
 				0DD2A37417141C4000E8A7B4 /* HowToPart.1 */,
 				0DD2A37217141C4000E8A7B4 /* Supporting Files */,
+				0DD2A37C171427A400E8A7B4 /* HowToPartSolver.cpp */,
+				0DD2A37D171427A400E8A7B4 /* HowToPartSolver.h */,
 			);
 			path = HowToPart;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DD2A37117141C4000E8A7B4 /* main.mm in Sources */,
+				0DD2A37E171427A400E8A7B4 /* HowToPartSolver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
