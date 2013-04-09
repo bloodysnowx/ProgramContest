@@ -33,10 +33,23 @@ int HowToPartSolver::solve()
             DPTable[i][j] = 0;
             // f(n, m) = f(n-1, 1) + f(n-2, 2) + ... + f(0, m-n)
             //      or = f(n-1, 1) + f(n-2, 2) + ... + f(n-m, m)
-            for(int k = 0; i - k  - 1>= 0 && k <= j; ++k)
+            for(int k = 0; i - k  - 1 >= 0 && k <= j; ++k)
             {
                 DPTable[i][j] += DPTable[i - k - 1][k];
             }
+        }
+    }
+    return DPTable[number][part - 1];
+}
+
+int HowToPartSolver::solveZ()
+{
+    for(int i = 2; i < number + 1; ++i)
+    {
+        for(int j = 1; j < part; ++j)
+        {
+            DPTable[i][j] = DPTable[i][j-1];
+            if(i - j - 1 >= 0) DPTable[i][j] += DPTable[i - j - 1][j];
         }
     }
     return DPTable[number][part - 1];

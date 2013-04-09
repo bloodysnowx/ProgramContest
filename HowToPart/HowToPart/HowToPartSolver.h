@@ -18,6 +18,7 @@ public:
     int solve();
     ~HowToPartSolver();
     void print();
+    int solveZ();
 private:
     const int number;
     const int part;
