@@ -12,9 +12,9 @@
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
-        HowToPartSolver* solver = new HowToPartSolver(20, 20, 10000);
-        solver->solve();
-        solver->print();
+        HowToPartSolver* solver = new HowToPartSolver(1000, 1000, 10000);
+        solver->solveZ();
+        // solver->print();
         delete solver;
     }
     return 0;

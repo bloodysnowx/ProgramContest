@@ -49,7 +49,7 @@ int HowToPartSolver::solveZ()
         for(int j = 1; j < part; ++j)
         {
             DPTable[i][j] = DPTable[i][j-1];
-            if(i - j - 1 >= 0) DPTable[i][j] += DPTable[i - j - 1][j];
+            if(i - j - 1 >= 0) DPTable[i][j] = (DPTable[i - j - 1][j] + DPTable[i][j]) % mod;
         }
     }
     return DPTable[number][part - 1];
