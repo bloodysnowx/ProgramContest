@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'FillGas' target in the 'FillGas' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
