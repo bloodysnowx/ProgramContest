@@ -12,6 +12,7 @@
 		0D9203591720CADF00B9BA10 /* FillGas.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D9203581720CADF00B9BA10 /* FillGas.1 */; };
 		0D932E24172229DB00C01233 /* FillGasSolverX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E22172229DB00C01233 /* FillGasSolverX.cpp */; };
 		0D932E2717222E2100C01233 /* GasStationTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E2517222E2100C01233 /* GasStationTree.cpp */; };
+		0D932E2A1722F39600C01233 /* FillGasSolverXX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E281722F39600C01233 /* FillGasSolverXX.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,8 @@
 		0D932E23172229DB00C01233 /* FillGasSolverX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillGasSolverX.h; sourceTree = "<group>"; };
 		0D932E2517222E2100C01233 /* GasStationTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GasStationTree.cpp; sourceTree = "<group>"; };
 		0D932E2617222E2100C01233 /* GasStationTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GasStationTree.h; sourceTree = "<group>"; };
+		0D932E281722F39600C01233 /* FillGasSolverXX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FillGasSolverXX.cpp; sourceTree = "<group>"; };
+		0D932E291722F39600C01233 /* FillGasSolverXX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillGasSolverXX.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				0D92035F1720D89600B9BA10 /* readme.txt */,
 				0D932E22172229DB00C01233 /* FillGasSolverX.cpp */,
 				0D932E23172229DB00C01233 /* FillGasSolverX.h */,
+				0D932E281722F39600C01233 /* FillGasSolverXX.cpp */,
+				0D932E291722F39600C01233 /* FillGasSolverXX.h */,
 				0D932E2517222E2100C01233 /* GasStationTree.cpp */,
 				0D932E2617222E2100C01233 /* GasStationTree.h */,
 			);
@@ -154,6 +159,7 @@
 				0D9203551720CADF00B9BA10 /* main.mm in Sources */,
 				0D932E24172229DB00C01233 /* FillGasSolverX.cpp in Sources */,
 				0D932E2717222E2100C01233 /* GasStationTree.cpp in Sources */,
+				0D932E2A1722F39600C01233 /* FillGasSolverXX.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
