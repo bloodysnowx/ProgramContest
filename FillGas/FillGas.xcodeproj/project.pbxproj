@@ -10,6 +10,8 @@
 		0D9203521720CADF00B9BA10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9203511720CADF00B9BA10 /* Foundation.framework */; };
 		0D9203551720CADF00B9BA10 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D9203541720CADF00B9BA10 /* main.mm */; };
 		0D9203591720CADF00B9BA10 /* FillGas.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D9203581720CADF00B9BA10 /* FillGas.1 */; };
+		0D932E24172229DB00C01233 /* FillGasSolverX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E22172229DB00C01233 /* FillGasSolverX.cpp */; };
+		0D932E2717222E2100C01233 /* GasStationTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E2517222E2100C01233 /* GasStationTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,10 @@
 		0D9203571720CADF00B9BA10 /* FillGas-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FillGas-Prefix.pch"; sourceTree = "<group>"; };
 		0D9203581720CADF00B9BA10 /* FillGas.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = FillGas.1; sourceTree = "<group>"; };
 		0D92035F1720D89600B9BA10 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		0D932E22172229DB00C01233 /* FillGasSolverX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FillGasSolverX.cpp; sourceTree = "<group>"; };
+		0D932E23172229DB00C01233 /* FillGasSolverX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillGasSolverX.h; sourceTree = "<group>"; };
+		0D932E2517222E2100C01233 /* GasStationTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GasStationTree.cpp; sourceTree = "<group>"; };
+		0D932E2617222E2100C01233 /* GasStationTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GasStationTree.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,10 @@
 				0D9203581720CADF00B9BA10 /* FillGas.1 */,
 				0D9203561720CADF00B9BA10 /* Supporting Files */,
 				0D92035F1720D89600B9BA10 /* readme.txt */,
+				0D932E22172229DB00C01233 /* FillGasSolverX.cpp */,
+				0D932E23172229DB00C01233 /* FillGasSolverX.h */,
+				0D932E2517222E2100C01233 /* GasStationTree.cpp */,
+				0D932E2617222E2100C01233 /* GasStationTree.h */,
 			);
 			path = FillGas;
 			sourceTree = "<group>";
@@ -142,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D9203551720CADF00B9BA10 /* main.mm in Sources */,
+				0D932E24172229DB00C01233 /* FillGasSolverX.cpp in Sources */,
+				0D932E2717222E2100C01233 /* GasStationTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +187,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -202,7 +214,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -244,6 +256,7 @@
 				0D92035E1720CADF00B9BA10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
