@@ -8,24 +8,9 @@
 
 #include "FillGasSolverX.h"
 
-FillGasSolverX::FillGasSolverX(int* gas, int gas_len, int* distance, int distance_len, int fuelmeter, int goal_distance) : gas(gas), gas_len(gas_len), distance(distance), distance_len(distance_len), fuelmeter(fuelmeter), goal_distance(goal_distance)
-{
-    
-}
-
-FillGasSolverX::~FillGasSolverX()
-{
-    
-}
-
 int FillGasSolverX::solve()
 {
     return this->solve(this->gas + 0, this->gas_len + 0, this->distance + 0, this->distance_len + 0, this->fuelmeter + 0, 0);
-}
-
-void FillGasSolverX::print()
-{
-    
 }
 
 int FillGasSolverX::solve(int* gas, int gas_len, int* distance, int distance_len, int fuelmeter, int position)

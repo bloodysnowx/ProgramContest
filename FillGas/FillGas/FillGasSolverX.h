@@ -10,22 +10,16 @@
 #define __FillGas__FillGasSolverX__
 
 #include <iostream>
+#include "IFillGasSolver.h"
 
-class FillGasSolverX
+class FillGasSolverX : public IFillGasSolver
 {
 public:
-    FillGasSolverX(int* gas, int gas_len, int* distance, int distance_len, int fuelmeter, int goal_distance);
-    ~FillGasSolverX();
+    FillGasSolverX(int* gas, int gas_len, int* distance, int distance_len, int fuelmeter, int goal_distance) : IFillGasSolver(gas, gas_len, distance, distance_len, fuelmeter, goal_distance) { };
+    ~FillGasSolverX() { };
     int solve();
-    void print();
 private:
-    int* gas;
-    int gas_len;
-    int* distance;
-    int distance_len;
-    int goal_distance;
     int solve(int* gas, int gas_len, int* distance, int distance_len, int fuelmeter, int position);
-    int fuelmeter;
 };
 
 #endif /* defined(__FillGas__FillGasSolverX__) */

@@ -11,26 +11,22 @@
 
 #include <iostream>
 #include <list>
+#include "IFillGasSolver.h"
 
 typedef struct {
     int gas;
     int distance;
 } GasStation;
 
-class FillGasSolverXX
+class FillGasSolverXX : public IFillGasSolver
 {
 public:
     FillGasSolverXX(int* gas, int gas_len, int* distance, int distance_len, int fuelmeter, int goal_distance);
     ~FillGasSolverXX();
     int solve();
-    void print();
 private:
-    // std::list<int> gas;
-    // std::list<int> distance;
     std::list<GasStation> gasStations;
-    int goal_distance;
     int solve(std::list<GasStation> gasStations, int fuelmeter, int position);
-    int fuelmeter;
 };
 
 #endif /* defined(__FillGas__FillGasSolverXX__) */

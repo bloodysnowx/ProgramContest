@@ -10,7 +10,7 @@
 
 
 
-FillGasSolverXX::FillGasSolverXX(int* gas, int gas_len, int* distance, int distance_len, int fuelmeter, int goal_distance) : fuelmeter(fuelmeter), goal_distance(goal_distance)
+FillGasSolverXX::FillGasSolverXX(int* gas, int gas_len, int* distance, int distance_len, int fuelmeter, int goal_distance) : IFillGasSolver(gas, gas_len, distance, distance_len, fuelmeter, goal_distance)
 {
     for(int i = 0; i < gas_len; ++i)
         this->gasStations.push_back({gas[i], distance[i]});
@@ -24,11 +24,6 @@ FillGasSolverXX::~FillGasSolverXX()
 int FillGasSolverXX::solve()
 {
     return this->solve(this->gasStations, this->fuelmeter, 0);
-}
-
-void FillGasSolverXX::print()
-{
-    
 }
 
 int FillGasSolverXX::solve(std::list<GasStation> gasStations, int fuelmeter, int position)
