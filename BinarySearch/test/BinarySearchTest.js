@@ -14,5 +14,14 @@ TestCase("BinarySearcherTest", {
     },
     "test solve 0 from [1, 3, 5, 7, 9] should return -1": function() {
 	assertEquals(-1, this.searcher.search(0, [1, 3, 5, 7, 9]));
+    },
+    "test solve 4 from [1, 3, 5, 7, 9] should return -1": function() {
+	assertEquals(-1, this.searcher.search(4, [1, 3, 5, 7, 9]));
+    },
+    "test solve 13 from [1, 3, 5, 7, 9] should return -1": function() {
+	assertEquals(-1, this.searcher.search(13, [1, 3, 5, 7, 9]));
+    },
+    "test solve 13 from [1, 3, 5, 7, 9, 11, 13, 15] should return 6": function() {
+	assertEquals(6, this.searcher.search(13, [1, 3, 5, 7, 9, 11, 13, 15]));
     }
 });
