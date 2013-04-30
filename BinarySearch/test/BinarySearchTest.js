@@ -1,6 +1,7 @@
 TestCase("BinarySearcherTest", {
     setUp: function() {
-        this.searcher = Object.create(BinarySearcher);
+        // this.searcher = Object.create(BinarySearcher);
+        this.searcher = Object.create(FirstBinarySearcher);
     },
 
     "test solve 1 from [1] should return 0": function() {
