@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "UnionFindTree.h"
+#include "FoodChainInfo.h"
 
 class FoodChainSolver
 {
@@ -23,6 +24,7 @@ private:
     int length;
     bool isValidNumber(int number);
     bool isValidInfo(int i);
+    FoodChainInfo** info;
 public:
     FoodChainSolver(int number, int* type, int* x, int* y, int length);
     ~FoodChainSolver();

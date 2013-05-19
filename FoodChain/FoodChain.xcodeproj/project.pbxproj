@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D49573D1748C92B00240575 /* FoodChainInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D49573B1748C92B00240575 /* FoodChainInfo.cpp */; };
+		0D4957401748C95100240575 /* FoodChainInfoFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D49573E1748C95100240575 /* FoodChainInfoFactory.cpp */; };
+		0D4957431748C96900240575 /* FoodChainSameInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4957411748C96900240575 /* FoodChainSameInfo.cpp */; };
+		0D4957461748C97900240575 /* FoodChainEatInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4957441748C97900240575 /* FoodChainEatInfo.cpp */; };
 		0DD2E9A0174662CE0043D49D /* UnionFindTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DD2E99E174662CE0043D49D /* UnionFindTree.cpp */; };
 		0DD2E9A3174665020043D49D /* FoodChainSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DD2E9A1174665020043D49D /* FoodChainSolver.cpp */; };
 		0DD36CFB17252CF8004B02B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD36CFA17252CF8004B02B6 /* Foundation.framework */; };
@@ -28,6 +32,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D49573B1748C92B00240575 /* FoodChainInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FoodChainInfo.cpp; sourceTree = "<group>"; };
+		0D49573C1748C92B00240575 /* FoodChainInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodChainInfo.h; sourceTree = "<group>"; };
+		0D49573E1748C95100240575 /* FoodChainInfoFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FoodChainInfoFactory.cpp; sourceTree = "<group>"; };
+		0D49573F1748C95100240575 /* FoodChainInfoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodChainInfoFactory.h; sourceTree = "<group>"; };
+		0D4957411748C96900240575 /* FoodChainSameInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FoodChainSameInfo.cpp; sourceTree = "<group>"; };
+		0D4957421748C96900240575 /* FoodChainSameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodChainSameInfo.h; sourceTree = "<group>"; };
+		0D4957441748C97900240575 /* FoodChainEatInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FoodChainEatInfo.cpp; sourceTree = "<group>"; };
+		0D4957451748C97900240575 /* FoodChainEatInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodChainEatInfo.h; sourceTree = "<group>"; };
 		0DD2E99E174662CE0043D49D /* UnionFindTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnionFindTree.cpp; sourceTree = "<group>"; };
 		0DD2E99F174662CE0043D49D /* UnionFindTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFindTree.h; sourceTree = "<group>"; };
 		0DD2E9A1174665020043D49D /* FoodChainSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FoodChainSolver.cpp; sourceTree = "<group>"; };
@@ -86,6 +98,14 @@
 				0DD2E99F174662CE0043D49D /* UnionFindTree.h */,
 				0DD2E9A1174665020043D49D /* FoodChainSolver.cpp */,
 				0DD2E9A2174665020043D49D /* FoodChainSolver.h */,
+				0D49573B1748C92B00240575 /* FoodChainInfo.cpp */,
+				0D49573C1748C92B00240575 /* FoodChainInfo.h */,
+				0D49573E1748C95100240575 /* FoodChainInfoFactory.cpp */,
+				0D49573F1748C95100240575 /* FoodChainInfoFactory.h */,
+				0D4957411748C96900240575 /* FoodChainSameInfo.cpp */,
+				0D4957421748C96900240575 /* FoodChainSameInfo.h */,
+				0D4957441748C97900240575 /* FoodChainEatInfo.cpp */,
+				0D4957451748C97900240575 /* FoodChainEatInfo.h */,
 			);
 			path = FoodChain;
 			sourceTree = "<group>";
@@ -152,6 +172,10 @@
 				0DD36CFE17252CF8004B02B6 /* main.mm in Sources */,
 				0DD2E9A0174662CE0043D49D /* UnionFindTree.cpp in Sources */,
 				0DD2E9A3174665020043D49D /* FoodChainSolver.cpp in Sources */,
+				0D49573D1748C92B00240575 /* FoodChainInfo.cpp in Sources */,
+				0D4957401748C95100240575 /* FoodChainInfoFactory.cpp in Sources */,
+				0D4957431748C96900240575 /* FoodChainSameInfo.cpp in Sources */,
+				0D4957461748C97900240575 /* FoodChainEatInfo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
