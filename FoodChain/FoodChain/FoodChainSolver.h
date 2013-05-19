@@ -21,6 +21,8 @@ private:
     int* x;
     int* y;
     int length;
+    bool isValidNumber(int number);
+    bool isValidInfo(int i);
 public:
     FoodChainSolver(int number, int* type, int* x, int* y, int length);
     ~FoodChainSolver();

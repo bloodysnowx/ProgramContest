@@ -10,7 +10,7 @@
 		0DD2E9A0174662CE0043D49D /* UnionFindTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DD2E99E174662CE0043D49D /* UnionFindTree.cpp */; };
 		0DD2E9A3174665020043D49D /* FoodChainSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DD2E9A1174665020043D49D /* FoodChainSolver.cpp */; };
 		0DD36CFB17252CF8004B02B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD36CFA17252CF8004B02B6 /* Foundation.framework */; };
-		0DD36CFE17252CF8004B02B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD36CFD17252CF8004B02B6 /* main.m */; };
+		0DD36CFE17252CF8004B02B6 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DD36CFD17252CF8004B02B6 /* main.mm */; };
 		0DD36D0217252CF8004B02B6 /* FoodChain.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DD36D0117252CF8004B02B6 /* FoodChain.1 */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		0DD2E9A2174665020043D49D /* FoodChainSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodChainSolver.h; sourceTree = "<group>"; };
 		0DD36CF717252CF8004B02B6 /* FoodChain */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FoodChain; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD36CFA17252CF8004B02B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0DD36CFD17252CF8004B02B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DD36CFD17252CF8004B02B6 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		0DD36D0017252CF8004B02B6 /* FoodChain-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodChain-Prefix.pch"; sourceTree = "<group>"; };
 		0DD36D0117252CF8004B02B6 /* FoodChain.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = FoodChain.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +79,7 @@
 		0DD36CFC17252CF8004B02B6 /* FoodChain */ = {
 			isa = PBXGroup;
 			children = (
-				0DD36CFD17252CF8004B02B6 /* main.m */,
+				0DD36CFD17252CF8004B02B6 /* main.mm */,
 				0DD36D0117252CF8004B02B6 /* FoodChain.1 */,
 				0DD36CFF17252CF8004B02B6 /* Supporting Files */,
 				0DD2E99E174662CE0043D49D /* UnionFindTree.cpp */,
@@ -149,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DD36CFE17252CF8004B02B6 /* main.m in Sources */,
+				0DD36CFE17252CF8004B02B6 /* main.mm in Sources */,
 				0DD2E9A0174662CE0043D49D /* UnionFindTree.cpp in Sources */,
 				0DD2E9A3174665020043D49D /* FoodChainSolver.cpp in Sources */,
 			);
@@ -185,7 +185,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx10.7;
 			};
@@ -212,7 +212,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx10.7;
 			};
 			name = Release;
