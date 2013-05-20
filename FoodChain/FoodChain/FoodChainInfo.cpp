@@ -7,3 +7,13 @@
 //
 
 #include "FoodChainInfo.h"
+
+bool FoodChainInfo::isValidAnimalNumber(int animalNumber)
+{
+    return animalNumber >= 0 && animalNumber < this->animalCount;
+}
+
+bool FoodChainInfo::isValidAnimalNumbers()
+{
+    return isValidAnimalNumber(this->x) && isValidAnimalNumber(this->y);
+}

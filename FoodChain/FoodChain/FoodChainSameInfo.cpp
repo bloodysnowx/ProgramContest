@@ -11,7 +11,7 @@
 bool FoodChainSameInfo::isValid()
 {
     // xとyが違う種類に存在しない
-    return !tree->findSet(x, y + number) && !tree->findSet(x, y + 2 * number);
+    return isValidAnimalNumbers() && !tree->findSet(x, y + animalCount) && !tree->findSet(x, y + 2 * animalCount);
 }
 
 void FoodChainSameInfo::add()
@@ -19,7 +19,7 @@ void FoodChainSameInfo::add()
     // xとyを同じAとして
     tree->unionSet(x, y);
     // xとyを同じBとして
-    tree->unionSet(x + number, y + number);
+    tree->unionSet(x + animalCount, y + animalCount);
     // xとyを同じCとして
-    tree->unionSet(x + 2 * number, y + 2 * number);
+    tree->unionSet(x + 2 * animalCount, y + 2 * animalCount);
 }

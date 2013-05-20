@@ -15,7 +15,7 @@
 class FoodChainSameInfo : public FoodChainInfo
 {
 public:
-    FoodChainSameInfo(UnionFindTree* tree, int x, int y, int number) : FoodChainInfo(tree, x, y, number) { }
+    FoodChainSameInfo(UnionFindTree* tree, int x, int y, int animalCount) : FoodChainInfo(tree, x, y, animalCount) { }
     ~FoodChainSameInfo() { };
     bool isValid();
     void add();

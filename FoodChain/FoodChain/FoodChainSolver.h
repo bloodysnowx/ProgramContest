@@ -17,16 +17,14 @@ class FoodChainSolver
 {
 private:
     UnionFindTree* tree;
-    int number;
+    int animalCount;
     int* type;
     int* x;
     int* y;
     int length;
-    bool isValidNumber(int number);
-    bool isValidInfo(int i);
     FoodChainInfo** info;
 public:
-    FoodChainSolver(int number, int* type, int* x, int* y, int length);
+    FoodChainSolver(int animalCount, int* type, int* x, int* y, int length);
     ~FoodChainSolver();
     int solve();
 };

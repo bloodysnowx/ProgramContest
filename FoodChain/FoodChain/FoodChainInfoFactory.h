@@ -15,7 +15,7 @@
 class FoodChainInfoFactory
 {
 public:
-    static FoodChainInfo* create(UnionFindTree* tree, int number, int type, int x, int y);
+    static FoodChainInfo* create(UnionFindTree* tree, int animalCount, int type, int x, int y);
 };
 
 #endif /* defined(__FoodChain__FoodChainInfoFactory__) */

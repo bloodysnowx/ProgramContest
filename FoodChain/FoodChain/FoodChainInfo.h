@@ -18,9 +18,12 @@ protected:
     UnionFindTree* const tree;
     const int x;
     const int y;
-    const int number;
+    const int animalCount;
+    bool isValidAnimalNumber(int animalNumber);
+    bool isValidAnimalNumbers();
+
 public:
-    FoodChainInfo(UnionFindTree* tree, int x, int y, int number) : tree(tree), x(x), y(y), number(number) { }
+    FoodChainInfo(UnionFindTree* tree, int x, int y, int animalCount) : tree(tree), x(x), y(y), animalCount(animalCount) { }
     virtual bool isValid() = 0;
     virtual void add() = 0;
     virtual ~FoodChainInfo() { };

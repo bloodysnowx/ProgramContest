@@ -11,15 +11,15 @@
 bool FoodChainEatInfo::isValid()
 {
     // xとyが同じ種類に存在しない、かつ、yがxを食べる関係ではない
-    return !tree->findSet(x, y) && !tree->findSet(x, y + 2 + number);
+    return isValidAnimalNumbers() && !tree->findSet(x, y) && !tree->findSet(x, y + 2 + animalCount);
 }
 
 void FoodChainEatInfo::add()
 {
     // xがAとしてBであるyを食べる
-    tree->unionSet(x, y + number);
+    tree->unionSet(x, y + animalCount);
     // xがBとしてCであるyを食べる
-    tree->unionSet(x + number, y + 2 * number);
+    tree->unionSet(x + animalCount, y + 2 * animalCount);
     // xがCとしてAであるyを食べる
-    tree->unionSet(x + 2 * number, y);
+    tree->unionSet(x + 2 * animalCount, y);
 }

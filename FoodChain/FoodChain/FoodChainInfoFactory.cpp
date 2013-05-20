@@ -10,13 +10,13 @@
 #include "FoodChainSameInfo.h"
 #include "FoodChainEatInfo.h"
 
-FoodChainInfo* FoodChainInfoFactory::create(UnionFindTree* tree, int number, int type, int x, int y)
+FoodChainInfo* FoodChainInfoFactory::create(UnionFindTree* tree, int animalCount, int type, int x, int y)
 {
     switch (type) {
         case 1:
-            return new FoodChainSameInfo(tree, x, y, number);
+            return new FoodChainSameInfo(tree, x, y, animalCount);
         case 2:
-            return new FoodChainEatInfo(tree, x, y, number);
+            return new FoodChainEatInfo(tree, x, y, animalCount);
         default:
             return nullptr;
             break;
