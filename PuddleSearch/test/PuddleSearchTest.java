@@ -1,4 +1,6 @@
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -49,6 +51,7 @@ public class PuddleSearchTest {
 				"ww" };
 		assertEquals(1, obj.search(convert(puddle_str1)));
 		// @formatter:on
+		assertThat(1, is(obj.search(convert(puddle_str1))));
 	}
 
 	@Test

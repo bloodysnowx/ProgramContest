@@ -31,7 +31,11 @@ int FoodChainSolver::solve()
     for(int i = 0; i < length; ++i)
     {
         if(info[i]->isValid()) info[i]->add();
-        else answer++;
+        else
+        {
+            std::cout << i << " is wrong." << std::endl;
+            answer++;
+        }
     }
     
     return answer;
