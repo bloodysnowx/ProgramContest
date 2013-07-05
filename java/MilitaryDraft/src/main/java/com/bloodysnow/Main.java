@@ -10,6 +10,8 @@ package com.bloodysnow;
 public class Main {
     public static void main(String... args)
     {
-        System.out.println("test");
+        int[][] edges = { {4, 3, 6831}, {1, 3, 4583}, {0, 0, 6592}, {0, 1, 3063}, {3, 3, 4975}, {1, 3, 2049}, {4, 2, 2104}, {2, 2, 781} };
+        MilitaryDraftSolver solver = new MilitaryDraftSolver(edges, 5, 5);
+        System.out.println(solver.solve());
     }
 }
