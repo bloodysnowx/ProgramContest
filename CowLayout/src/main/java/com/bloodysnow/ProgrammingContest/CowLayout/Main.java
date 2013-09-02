@@ -15,7 +15,7 @@ public class Main {
 
     public static String createComparative(int[] x, String compare)
     {
-        return createX(x[0]) + " + " + x[2] + compare + x[1] + ", ";
+        return createX(x[0]) + " + " + x[2] + compare + createX(x[1]) + ", ";
     }
 
     public static String createMathematicaString(int N, int ML, int MD, int[][] likes, int[][] dislikes)
