@@ -11,17 +11,24 @@ import java.awt.*;
  */
 public class Main {
     public static void main(String[] args) {
-        Point a = new Point(1, 11);
+        Point a = new Point(1, 990000000);
         Point b = new Point(5, 3);
-        // a.x <= b.x
-        int commonDivisor = gcd(Math.abs(a.x - b.x), Math.abs(a.y - b.y));
+        if(a.x > b.x) {
+            Point tmp = a;
+            a = b;
+            b = tmp;
+        }
+
+        int commonDivisor = gcd(b.x - a.x, Math.abs(a.y - b.y));
         int denominator = (b.x - a.x) / commonDivisor;
         int numerator = (b.y - a.y) / commonDivisor;
 
-        for(int i = 1; i * Math.abs(denominator) < Math.abs(a.x - b.x) ; ++i)
+        int i;
+        for(i = 1; i * denominator < b.x - a.x ; ++i)
         {
-            System.out.println(new Point(a.x + i * denominator, a.y + i * numerator));
+            // System.out.println(new Point(a.x + i * denominator, a.y + i * numerator));
         }
+        System.out.println(i - 1);
     }
 
     public static int gcd(int x, int y) {
