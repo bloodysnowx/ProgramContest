@@ -10,7 +10,7 @@ import java.util.BitSet;
 public class Main {
     public static void main(String[] args)
     {
-        int number = 1000000;
+        int number = 10000000;
         calcEratosthenesSieve(number);
         // printEratosthenesSieve(number);
         countEratosthenesSieve(number);
