@@ -5,7 +5,7 @@ var Solver = {
            3. 2を繰り返す */
         for(var i = 0; i < fromId.length; ++i)
         {
-            var result = this.pour(bottles[fromId[i]], bottles[toId[i]], capacities[toId[i]]);
+            var result = this.pour2(bottles[fromId[i]], bottles[toId[i]], capacities[toId[i]]);
             bottles[fromId[i]] = result[0];
             bottles[toId[i]] = result[1];
         }
@@ -13,5 +13,11 @@ var Solver = {
     }, 
     pour: function(fromAmount, toAmount, toCapacity) {
         return fromAmount + toAmount <= toCapacity ? [0, fromAmount + toAmount] : [fromAmount + toAmount - toCapacity, toCapacity];
+    },
+    pour2: function(fromAmount, toAmount, toCapacity) {
+        var sum = fromAmount + toAmount;
+        var toResult = Math.min(sum, toCapacity);
+        var fromResult = sum - toResult;
+        return [fromResult, toResult];
     }
 };
