@@ -3,14 +3,12 @@ var Solver = {
         /* 1. 辞書を用意する
            2. ヒットした場合カウントアップする
            3. 最大の値を返す */
+        return this.countUp(first.concat(second));
+    },
+    countUp: function(values)
+    {
         var dict = {};
         var max = 0;
-        max = this.countUp(first.concat(second), dict, max);
-        // max = this.countUp(second, dict, max);
-        return max;
-    },
-    countUp: function(values, dict, max)
-    {
         for(var i = 0; i < values.length; ++i)
         {
             var value = values[i];
