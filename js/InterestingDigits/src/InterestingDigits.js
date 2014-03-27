@@ -17,17 +17,11 @@ var Solver = {
         }
         return interestingNumbers;
     },
-    range: function(begin, end) {
-        return Array.apply(null, {length: end - begin}).map(Number.call, Number).map(function(x) { return x + begin; });
-    },
+    range: function(begin, end) { return Array.apply(null, {length: end - begin}).map(Number.call, Number).map(function(x) { return x + begin; }); },
     cartesianProductSub: function(a, b) {
         var prod = a.map(function(x) { return b.map(function(y) { return x instanceof Array ? x.concat(y) : [x, y]; }); });
         return prod.reduce(function(x, y) { return x.concat(y); });
     },
-    cartesianProduct: function() {
-        return [].slice.apply(arguments).reduce(function(a, b) { return Solver.cartesianProductSub(a, b); });
-    },
-    isDivisor: function(x, numbers, base) {
-        return numbers.reduce(function(a, b)  { return a * base + b; }, 0) % x == 0;
-    }
+    cartesianProduct: function() { return [].slice.apply(arguments).reduce(function(a, b) { return Solver.cartesianProductSub(a, b); }); },
+    isDivisor: function(x, numbers, base) { return numbers.reduce(function(a, b)  { return a * base + b; }, 0) % x == 0; }
 };
