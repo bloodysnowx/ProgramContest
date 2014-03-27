@@ -8,7 +8,7 @@ var Solver = {
     solve: function(values) {
         var palindrome_len = 0;
         while(values.length > 1) {
-            values = values.slice(1, values.length - (values.slice(-1) == values.slice(0, 1) ? 1 : 0));
+            values = values.slice(1, values.length - (values.slice(-1) == values.slice(0, 1)));
             palindrome_len += 2;
         }
         return palindrome_len + values.length;
