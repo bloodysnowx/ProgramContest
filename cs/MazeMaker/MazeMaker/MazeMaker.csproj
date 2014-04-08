@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8C26F526-0878-4CF2-A057-20AE35E7AFE2}</ProjectGuid>
+    <ProjectGuid>{CD06CCEA-D752-49C0-8B7B-C6C030264505}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CrazyBot</RootNamespace>
-    <AssemblyName>CrazyBot</AssemblyName>
+    <RootNamespace>MazeMaker</RootNamespace>
+    <AssemblyName>MazeMaker</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,15 +33,11 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CrazyBotSolver.cs" />
-    <Compile Include="ICrazyBotSolver.cs" />
-    <Compile Include="CrazyBotSolver2.cs" />
+    <Compile Include="MazeMakerSolver.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,6 +10,18 @@ import java.util.BitSet;
 public class Main {
     public static void main(String[] args)
     {
+        calcEratosthenesSieve(977);
+        countEratosthenesSieve(2);
+        countEratosthenesSieve(5);
+        countEratosthenesSieve(10);
+        countEratosthenesSieve(19);
+        countEratosthenesSieve(54);
+        countEratosthenesSieve(224);
+        countEratosthenesSieve(312);
+        countEratosthenesSieve(616);
+        countEratosthenesSieve(888);
+        countEratosthenesSieve(977);
+
         int number = 10000000;
         calcEratosthenesSieve(number);
         // printEratosthenesSieve(number);

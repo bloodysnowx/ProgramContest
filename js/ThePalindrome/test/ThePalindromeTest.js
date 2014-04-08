@@ -13,5 +13,8 @@ TestCase("ThePalindromeTest", {
     },  
     "test abdfhdyrbdbsdfghjkllkjhgfds should return 38": function() {
         assertEquals(38, this.solver.solve("abdfhdyrbdbsdfghjkllkjhgfds"));
+    },
+    "test abcbca should return 11": function() {
+        assertEquals(11, this.solver.solve("abcbca"));
     }
  });

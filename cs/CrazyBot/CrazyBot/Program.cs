@@ -6,7 +6,7 @@ namespace CrazyBot
 	{
 		public static void Main(string[] args)
 		{
-			var solver = new CrazyBotSolver();
+			var solver = new CrazyBotSolver2();
 			Console.WriteLine(solver.solve(1, 25, 25, 25, 25));
 			Console.WriteLine(solver.solve(2, 25, 25, 25, 25));
 			Console.WriteLine(solver.solve(7, 50, 0, 0, 50));

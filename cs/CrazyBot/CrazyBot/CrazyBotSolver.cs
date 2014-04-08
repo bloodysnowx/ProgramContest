@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace CrazyBot
 {
-	public class CrazyBotSolver
+	public class CrazyBotSolver : ICrazyBotSolver
 	{
 		public Decimal solve(int n, int east, int west, int south, int north) {
 			var walkingStack = new Stack<WalkingData>();
@@ -20,6 +20,7 @@ namespace CrazyBot
 
 			while (walkingStack.Count > 0) {
 				var currentWalkingData = walkingStack.Pop();
+				if(currentWalkingData.Probability <= 0m) continue;
 				if(currentWalkingData.isVisitedTheSamePoint()) continue;
 				if(currentWalkingData.getSteps() == n) { successList.Add (currentWalkingData); continue; }
 				walkingStack.Push((new WalkingData(currentWalkingData)).walkEast(east));

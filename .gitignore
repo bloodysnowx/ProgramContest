@@ -6,3 +6,6 @@
 *.exe
 */Debug/*
 */*/Debug/*
+.idea/
+*~
+obj/

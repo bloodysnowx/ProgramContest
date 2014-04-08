@@ -8,5 +8,5 @@ var Solver = {
     },
     solve2: function(values) {
         return Math.max.apply(null, values.map(function(x) { return values.reduce(function (a, b) { return a * b; }, 1) * (x + 1) / x; }));
-    }
+    }     
 };

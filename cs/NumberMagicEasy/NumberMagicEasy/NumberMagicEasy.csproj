@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8C26F526-0878-4CF2-A057-20AE35E7AFE2}</ProjectGuid>
+    <ProjectGuid>{C17B7CC3-0BB1-4C77-A3D5-855EB292A152}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CrazyBot</RootNamespace>
-    <AssemblyName>CrazyBot</AssemblyName>
+    <RootNamespace>NumberMagicEasy</RootNamespace>
+    <AssemblyName>NumberMagicEasy</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,16 +32,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CrazyBotSolver.cs" />
-    <Compile Include="ICrazyBotSolver.cs" />
-    <Compile Include="CrazyBotSolver2.cs" />
+    <Compile Include="NumberMagicEasySolver.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
