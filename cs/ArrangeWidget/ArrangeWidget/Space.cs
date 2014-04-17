@@ -20,11 +20,11 @@ namespace ArrangeWidget
 				}
 			}
 			/*
-				System.Console.Write("Space(" + x.ToString() + ", " + y.ToString() + ") = ");
-				foreach(var width in widthList)
-					System.Console.Write(width.ToString() + ", ");
-				System.Console.WriteLine();
-				*/
+			System.Console.Write("Space(" + x.ToString() + ", " + y.ToString() + ") = ");
+			foreach(var width in widthList)
+				System.Console.Write(width.ToString() + ", ");
+			System.Console.WriteLine();
+			*/
 		}
 
 		public bool canArrange(Widget widget) {
