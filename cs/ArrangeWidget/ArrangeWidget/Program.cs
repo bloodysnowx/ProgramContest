@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ArrangeWidget
 {
@@ -8,12 +9,14 @@ namespace ArrangeWidget
 		public static void Main(string[] args)
 		{
 			readFromConsole();
-			/*
-			var solver = new Solver();
-			var answers = solver.solve(new string[]{"1000", "1101", "1001"}, new Widget[]{new Widget(1, 2), new Widget(2, 3), new Widget(2, 1)});
+			// readFromSource();
+		}
+
+		private static void readFromSource() {
+			var solver = new Solver2();
+			var answers = solver.solve(new string[]{"1000", "1101", "1001", "1111"}, new Widget[]{new Widget(1, 2), new Widget(2, 3), new Widget(2, 1)});
 			foreach(int answer in answers)
 				System.Console.WriteLine(answer);
-			*/
 		}
 
 		private static void readFromConsole() {
@@ -35,61 +38,28 @@ namespace ArrangeWidget
 				widgets[i] = new Widget(S, T);
 			}
 
-			var answers = (new Solver()).solve(fields, widgets);
+			var answers = (new Solver2()).solve(fields, widgets);
 			foreach(int answer in answers)
 				System.Console.WriteLine(answer); 
 		}
 
-		class Widget {
-			public int S { get; private set; }
-			public int T { get; private set; }
 
-			public Widget(int S, int T) {
-				this.S = S - 1;
-				this.T = T - 1;
-			}
-		}
 
-		class Space {
-			private int[] widthList;
-
-			public Space(String[] fields, int x, int y) {
-
-			}
-
-			public bool canArrange(Widget widget) {
-				return true;
-			}
-		}
-
-		class Solver {
+		class Solver2 {
 			public IEnumerable<int> solve(String[] fields, Widget[] widgets) {
-				foreach(Widget widget in widgets)
-					yield return solve(fields, widget);
+				Space[][] spaces = new Space[fields.Length][];
+				for(int y = 0; y < spaces.Length; ++y) {
+					spaces[y] = new Space[fields[y].Length];
+					for(int x = 0; x < spaces[y].Length; ++x)
+						spaces[y][x] = new Space(fields, x, y);
+				}
+
+				foreach(var widget in widgets)
+					yield return solve(spaces, widget);
 			}
 
-			private int solve(String[] fields, Widget widget) {
-				int answer = 0;
-				for(int i = 0; i < fields.Length - widget.S; ++i) {
-					for(int j = 0; j < fields[i].Length - widget.T; ++j) {
-						if(canArrange(fields, widget, i, j)) {
-							++answer;
-						}
-					}
-				}
-				return answer;
-			}
-
-			private bool canArrange(String[] fields, Widget widget, int i, int j) {
-				bool result = true;
-				for(int x = j; x <= j + widget.T; ++x) {
-					for(int y = i; y <= i + widget.S; ++y) {
-						// System.Console.Write("(" + y.ToString() + ", " + x.ToString() + "), ");
-						result = result && fields[y][x] == '0';
-					}
-				}
-				// System.Console.WriteLine("canArray(" + i.ToString() + ", " + j.ToString() + ") = " + result.ToString());
-				return result;
+			public int solve(Space[][] spaces, Widget widget) {
+				return spaces.Select(spaceRaw => spaceRaw.Where(space => space.canArrange(widget)).Count()).Sum();
 			}
 		}
 	}
