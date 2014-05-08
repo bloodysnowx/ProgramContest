@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MyVector
+namespace bloodysnow.DataStructures
 {
-	class MainClass
+	class VectorMainClass
 	{
 		public static void Main(string[] args)
 		{
@@ -16,7 +16,7 @@ namespace MyVector
 		}
 	}
 
-	class MyVector<T> : IEnumerable<T> {
+	public class MyVector<T> : IEnumerable<T> {
 		private T[] buffer;
 		private int _size;
 

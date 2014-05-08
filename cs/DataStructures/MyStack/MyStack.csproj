@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{03E602BC-1CA8-4E87-ABE4-6D5BDEA50C64}</ProjectGuid>
+    <ProjectGuid>{9C8EF7A7-343D-4E8E-A22C-92AA112330EC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MyVector</RootNamespace>
-    <AssemblyName>MyVector</AssemblyName>
+    <RootNamespace>MyStack</RootNamespace>
+    <AssemblyName>MyStack</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,4 +36,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\MyVector\MyVector\MyVector.csproj">
+      <Project>{03E602BC-1CA8-4E87-ABE4-6D5BDEA50C64}</Project>
+      <Name>MyVector</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

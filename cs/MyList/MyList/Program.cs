@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MyList
+namespace bloodysnow.DataStructures
 {
-	class MainClass
+	class ListMainClass
 	{
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			var list = new MyList<int>();
+			list.add(3);
+			list.add(5);
+			list.add(10);
+			foreach(int i in list)
+				System.Console.WriteLine(i);
 		}
 	}
 
-	class MyList<T> : IEnumerable<T> {
+	public class MyList<T> : IEnumerable<T> {
 
 		class Node {
 			public T value;
