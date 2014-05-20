@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace CantStopCalculator
 {
@@ -22,13 +23,16 @@ namespace CantStopCalculator
 			}
 			*/
 
-			uint[] targets = new uint[args.Length - 1];
-			for(int i = 0; i < targets.Length; ++i)
-				targets[i] = System.Convert.ToUInt32(args[i + 1]);
+			uint[] targets = new uint[args.Length];
+			for(int i = 0; i < targets.Length; ++i) targets[i] = System.Convert.ToUInt32(args[i]);
 			var combinations = cantStopCalculator.getCombination(targets);
 			Console.WriteLine("Combinations = " + combinations);
-			Console.WriteLine("Probability = " + (double)combinations / (double)cantStopCalculator.getAllCombination());
-
+			double probability = (double)combinations / (double)cantStopCalculator.getAllCombination();
+			Console.WriteLine("Probability = " + probability);
+			Console.Write("Enter steps : ");
+			var line = Console.ReadLine();
+			uint steps = System.Convert.ToUInt32(line);
+			Console.WriteLine((probability * 1 - (1 - probability) * steps > 0) ? "Go!" : "Stop");
 			Console.ReadLine();
 		}
 	}
@@ -49,10 +53,7 @@ namespace CantStopCalculator
 
 		public uint getCombination(uint[] targets) {
 			uint count = 0;
-			for(uint i = 0; i < getAllCombination(); ++i) foreach(var target in targets) if(isOK(getDices(i), target)) {
-						++count;
-						break;
-			}
+			for(uint i = 0; i < getAllCombination(); ++i) foreach(var target in targets) if(isOK(getDices(i), target)) { ++count; break; }
 			return count;
 		}
 
