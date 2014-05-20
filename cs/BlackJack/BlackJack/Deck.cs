@@ -15,6 +15,11 @@ namespace BlackJack
 
 		public void shuffle() {	cards = cards.OrderBy(card => Guid.NewGuid()).ToList(); }
 		public int getCount() {	return cards.Count;	}
+		public Card popCard() {
+			var card = cards[0];
+			cards.Remove(card);
+			return card;
+		}
 	}
 }
 

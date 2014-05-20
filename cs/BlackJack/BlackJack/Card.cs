@@ -18,9 +18,15 @@ namespace BlackJack
 
 			rank = (i % 13) + 1;
 			suit = (Suit)(i / 13);
+			System.Console.WriteLine(this.ToString());
 		}
 
 		public int getValue() { return Math.Min(10, rank); }
+
+		public override string ToString()
+		{
+			return string.Format("[Card] {0} {1}", rank, suit);
+		}
 	}
 }
 
