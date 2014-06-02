@@ -28,34 +28,23 @@ namespace BatchSystem
 
 	class BatchSystemSolver
 	{
-		class Jobs {
-			public class Job {
-				public Job(int jobNumber, int duration) {
-					this.jobNumber = jobNumber;
-					this.duration = duration;
-				}
-				public int jobNumber { get; private set; }
-				public int duration { get; private set; }
+		public class Job {
+			public Job(int jobNumber, int duration) {
+				this.jobNumber = jobNumber;
+				this.duration = duration;
 			}
-
-			public IList<Job> jobs { get; private set; }
-			string name;
-
-			public Jobs(string name) {
-				this.name = name;
-				jobs = new List<Job>();
-			}
-			public void addJob(Job job) { this.jobs.Add(job); }
+			public int jobNumber { get; private set; }
+			public int duration { get; private set; }
 		}
 
 		public IEnumerable<int> solve(int[] duration, string[] user) {
-			IDictionary<string, Jobs> jobs = new Dictionary<string, Jobs>();
+			IDictionary<string, IList<Job>> jobs = new Dictionary<string, IList<Job>>();
 			for(int i = 0; i < Math.Min(duration.Length, user.Length); ++i) {
-				if(!jobs.ContainsKey(user[i])) jobs.Add(user[i], new Jobs(user[i]));
-				jobs[user[i]].addJob(new Jobs.Job(i, duration[i]));
+				if(!jobs.ContainsKey(user[i])) jobs.Add(user[i], new List<Job>());
+				jobs[user[i]].Add(new Job(i, duration[i]));
 			}
-			foreach(var job in jobs.OrderBy(job => job.Value.jobs.Select(x => x.duration).Sum()))
-				foreach(var x in job.Value.jobs)
+			foreach(var job in jobs.OrderBy(job => job.Value.Select(x => x.duration).Sum()))
+				foreach(var x in job.Value)
 					yield return x.jobNumber;
 		}
 	}
