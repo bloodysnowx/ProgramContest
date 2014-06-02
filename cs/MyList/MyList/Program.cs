@@ -44,18 +44,13 @@ namespace bloodysnow.DataStructures
 			Node currentNode = startNode;
 
 			while(currentNode != null) {
-				if(currentNode.value.Equals(t))
-					return true;
-				else
-					currentNode = currentNode.nextNode;
-				}
+				if(currentNode.value.Equals(t)) return true;
+				else currentNode = currentNode.nextNode;
+			}
 			return false;
 		}
 
-		public T get(int index) {
-			Node targetNode = getNode(index);
-			return targetNode == null ? default(T) : targetNode.value;
-		}
+		public T get(int index) { return getNode(index).value; }
 
 		public T set(int index, T t) {
 			Node targetNode = getNode(index);
@@ -68,16 +63,15 @@ namespace bloodysnow.DataStructures
 		}
 
 		private Node getNode(int index) {
+			if(index < 0) throw new IndexOutOfRangeException();
 			int count = 0;
 			Node currentNode = startNode.nextNode;
 
 			while(currentNode != null) {
-				if(count++ == index)
-					return currentNode;
-				else
-					currentNode = currentNode.nextNode;
+				if(count++ == index) return currentNode;
+				else currentNode = currentNode.nextNode;
 			}
-			return null;
+			throw new IndexOutOfRangeException();
 		}
 
 		public int size() {
@@ -85,7 +79,7 @@ namespace bloodysnow.DataStructures
 			Node currentNode = startNode.nextNode;
 
 			while(currentNode != null) {
-				count++;
+				++count;
 				currentNode = currentNode.nextNode;
 			}
 			return count;
@@ -93,7 +87,7 @@ namespace bloodysnow.DataStructures
 
 		public T remove(int index) {
 			Node targetNode = startNode;
-			if(index > 0)
+			if(index != 0)
 				targetNode = getNode(index - 1);
 			T value = targetNode.value;
 
@@ -103,7 +97,7 @@ namespace bloodysnow.DataStructures
 
 		public void add(int index, T t) {
 			Node targetNode = startNode;
-			if(index > 0)
+			if(index != 0)
 				targetNode = getNode(index - 1);
 
 			Node newNode = new Node(t);
@@ -134,7 +128,5 @@ namespace bloodysnow.DataStructures
 		}
 
 		#endregion
-
-
 	}
 }
