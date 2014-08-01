@@ -29,11 +29,7 @@ namespace CirclesCountry
 
 	class CountryTree {
 		class Circle {
-			public Circle(int x, int y, int r) {
-				X = x;
-				Y = y;
-				R = r;
-			}
+			public Circle(int x, int y, int r) { X = x; Y = y; R = r; }
 			public int X { get; private set; }
 			public int Y { get; private set; }
 			public int R { get; private set; }
@@ -52,11 +48,9 @@ namespace CirclesCountry
 			circles.Sort ((a, b) => a.R - b.R);
 
 			var allCountries = new List<CountryNode> ();
-			foreach (var circle in circles) {
-				var newCountry = new CountryNode (circle);
+			foreach (var circle in circles) allCountries.Add (new CountryNode (circle));
+			foreach (var newCountry in allCountries)
 				foreach (var country in allCountries.Where(country => country.outerCountry == null).Where (country => newCountry.isInner (country))) setRelation (newCountry, country);
-				allCountries.Add (newCountry);
-			}
 			root = new CountryNode (new Circle (0, 0, int.MaxValue));
 			foreach (var country in allCountries.Where(country => country.outerCountry == null)) setRelation (root, country);
 		}
@@ -67,10 +61,7 @@ namespace CirclesCountry
 			int steps = 0;
 			CountryNode currentCountry = startCountry;
 			while (currentCountry != endCountry) {
-				if (currentCountry.isInner (endCountry)) { 
-					foreach (var country in currentCountry.innerCountries) 
-						if (country.isInner (endCountry) || country == endCountry) currentCountry = country;
-				}
+				if (currentCountry.isInner (endCountry)) { foreach (var country in currentCountry.innerCountries) if (country.isInner (endCountry) || country == endCountry) currentCountry = country; }
 				else currentCountry = currentCountry.outerCountry;
 				steps++;
 			}
@@ -81,22 +72,12 @@ namespace CirclesCountry
 			public Circle Circle { get; private set; }
 			public IList<CountryNode> innerCountries = new List<CountryNode> ();
 			public CountryNode outerCountry { get; set; }
-
-			public CountryNode(Circle circle) {
-				Circle = circle;
-			}
-
+			public CountryNode(Circle circle) { Circle = circle; }
 			public int X { get { return Circle.X; } }
 			public int Y { get { return Circle.Y; } }
 			public int R { get { return Circle.R; } }
-
-			public bool isInner(CountryNode node) {
-				return node.R < R && (node.X - X) * (node.X - X) + (node.Y - Y) * (node.Y - Y) < (Int64)R * (Int64)R;
-			}
-
-			bool isInnerPoint(int x, int y) {
-				return (X - x) * (X - x) + (Y - y) * (Y - y) < (Int64)R * (Int64)R;
-			}
+			public bool isInner(CountryNode node) { return node.R < R && (node.X - X) * (node.X - X) + (node.Y - Y) * (node.Y - Y) < (Int64)R * (Int64)R; }
+			bool isInnerPoint(int x, int y) { return (X - x) * (X - x) + (Y - y) * (Y - y) < (Int64)R * (Int64)R; }
 
 			public CountryNode findCountry(int x, int y) {
 				if (!isInnerPoint (x, y)) return null;
