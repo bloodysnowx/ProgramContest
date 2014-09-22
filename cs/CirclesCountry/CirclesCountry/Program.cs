@@ -22,8 +22,6 @@ namespace CirclesCountry
 			System.Console.WriteLine (countryTree.calc (2, 3, 13, 2));
 			countryTree = new CountryTree(new int[]{-107,-38,140,148,-198,172,-179,148,176,153,-56,-187}, new int[]{175,-115,23,-2,-49,-151,-52,42,0,68,109,-174}, new int[]{135,42,70,39,89,39,43,150,10,120,16,8});
 			System.Console.WriteLine (countryTree.calc (102, 16, 19, -108));
-
-			Console.WriteLine ("Hello World!");
 		}
 	}
 
