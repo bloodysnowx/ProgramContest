@@ -9,3 +9,6 @@
 .idea/
 *~
 obj/
+Scala/*/project/target
+Scala/*/target
+Scala/target
