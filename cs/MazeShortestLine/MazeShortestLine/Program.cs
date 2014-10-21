@@ -36,7 +36,7 @@ namespace MazeShortestLine
 	 * 2. startに0を記入する
 	 * 3. startから1歩でたどり着ける点に1を記入する
 	 * 4. 1歩の地点から1歩でたどり着ける点に2を記入する
-	 * 5. 2歩お地点から・・・
+	 * 5. 2歩の地点から・・・
 	 * 6. goalにたどりついたら、その数値を出力する
 	 */
 	class MazeShortesLineFinder {
