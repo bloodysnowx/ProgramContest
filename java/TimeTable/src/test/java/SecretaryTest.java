@@ -20,7 +20,8 @@ public class SecretaryTest {
 	@Before
 	public void setUp() throws Exception {
 		choose = new HowToChoose1();
-		// choose = new HowToChoose2();
+		choose = new HowToChoose2();
+        choose = new HowToChoose3();
 	}
 
 	@After
