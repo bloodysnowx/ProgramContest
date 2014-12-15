@@ -24,5 +24,8 @@ TestCase("HowToCutSolverTest", {
     },
     "test solve [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] should return 34": function() {
 	assertEquals(34, this.solver.solve([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
+    },
+    "test solve Array.apply(null, new Array(10000)).map(Number.prototype.valueOf, 1) should return 133616": function() {
+        assertEquals(133616, this.solver.solve(Array.apply(null, new Array(10000)).map(Number.prototype.valueOf, 1)));
     }
 });
