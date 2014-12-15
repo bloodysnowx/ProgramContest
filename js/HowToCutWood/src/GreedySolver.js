@@ -6,7 +6,7 @@ var GreedySolver = {
         {
             var newPoint = points.shift()+points.shift();
             points.push(newPoint);
-            points.sort(function(a, b) { return (parseInt(a) > parseInt(b)) ? 1 : -1; });
+            points.sort(function(a, b) { return a - b; });
             return this.solve(points) + newPoint;
         }
     }
