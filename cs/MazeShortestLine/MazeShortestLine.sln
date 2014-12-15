@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeShortestLine", "MazeShortestLine\MazeShortestLine.csproj", "{9117CF6F-896E-48E9-A583-ED4A4B043B08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9117CF6F-896E-48E9-A583-ED4A4B043B08}.Debug|x86.ActiveCfg = Debug|x86
+		{9117CF6F-896E-48E9-A583-ED4A4B043B08}.Debug|x86.Build.0 = Debug|x86
+		{9117CF6F-896E-48E9-A583-ED4A4B043B08}.Release|x86.ActiveCfg = Release|x86
+		{9117CF6F-896E-48E9-A583-ED4A4B043B08}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MazeShortestLine\MazeShortestLine.csproj
+	EndGlobalSection
+EndGlobal
