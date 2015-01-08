@@ -1,0 +1,57 @@
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:1:1: error: unknown type name 'import'
+import java.util.ArrayList;
+^
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:1:12: error: expected ';' after top level declarator
+import java.util.ArrayList;
+           ^
+           ;
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:2:1: error: unknown type name 'import'
+import java.util.Collections;
+^
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:2:12: error: expected ';' after top level declarator
+import java.util.Collections;
+           ^
+           ;
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:3:1: error: unknown type name 'import'
+import java.util.Dictionary;
+^
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:3:12: error: expected ';' after top level declarator
+import java.util.Dictionary;
+           ^
+           ;
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:4:1: error: unknown type name 'import'
+import java.util.Hashtable;
+^
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:4:12: error: expected ';' after top level declarator
+import java.util.Hashtable;
+           ^
+           ;
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:5:1: error: unknown type name 'import'
+import java.util.LinkedList;
+^
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:5:12: error: expected ';' after top level declarator
+import java.util.LinkedList;
+           ^
+           ;
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:6:1: error: unknown type name 'import'
+import java.util.List;
+^
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:6:12: error: expected ';' after top level declarator
+import java.util.List;
+           ^
+           ;
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:7:1: error: unknown type name 'import'
+import java.util.Map;
+^
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:7:12: error: expected ';' after top level declarator
+import java.util.Map;
+           ^
+           ;
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:9:1: error: unknown type name 'public'
+public class HuffmanCoding implements Coding {
+^
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding/src/HuffmanCoding.java:9:13: error: expected ';' after top level declarator
+public class HuffmanCoding implements Coding {
+            ^
+            ;
+16 errors generated.

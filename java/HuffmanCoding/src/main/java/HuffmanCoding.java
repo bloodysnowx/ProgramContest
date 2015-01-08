@@ -1,23 +1,39 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Dictionary;
-import java.util.Hashtable;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.nio.ByteBuffer;
+import java.util.*;
 
 public class HuffmanCoding implements Coding {
 
 	@Override
 	public byte[] compress(byte[] src) {
-		// TODO Auto-generated method stub
-		return null;
+        String sourceString = new String(src);
+        List<CharCount> charCounts = createSortedCharCountList(sourceString);
+		BinaryTree<Character> tree = this.makeTree(charCounts);
+
+        StringBuffer codeString = new StringBuffer();
+		for(char c : sourceString.toCharArray())
+			codeString.append(tree.getCode(c));
+
+        byte[] dict = (tree.getDictString() + ";").getBytes();
+        byte[] code = codeStringToBits(codeString.toString());
+        byte[] result = new byte[dict.length + code.length];
+        System.arraycopy(dict, 0, result, 0, dict.length);
+        System.arraycopy(code, 0, result, dict.length, code.length);
+
+        return result;
 	}
+
+    private byte[] codeStringToBits(String src) {
+        BitSet bitset = new BitSet(src.length());
+        for(int i = 0; i < src.length(); ++i) {
+            if(src.charAt(i) == '1') bitset.set(i);
+            else bitset.clear(i);
+        }
+        return bitset.toByteArray();
+    }
 
 	@Override
 	public byte[] deCompress(byte[] src) {
-		// TODO Auto-generated method stub
-		return null;
+        return null;
 	}
 	
 	class CharCount implements Comparable {
@@ -53,24 +69,34 @@ public class HuffmanCoding implements Coding {
 		return tree;
 	}
 
-	@Override
-	public String compress(String src) {
-		// 1. 出現している文字を列挙する
-		// 2. 出現回数をカウントする
-		Map<Character, Integer> dict = new Hashtable<Character, Integer>();
+    private Map<Character, Integer> createCharacterCountMap(String src) {
+        Map<Character, Integer> dict = new Hashtable<Character, Integer>();
 		for(char str : src.toCharArray())
 		{
 			int count = 0;
 			if(dict.containsKey(str)) count = dict.get(str);
 			dict.put(str, ++count);
 		}
-		// 3. 出現回数の少ないものから結合して二分木を生成する
+        return dict;
+    }
+
+    private List<CharCount> createSortedCharCountList(String src) {
+        Map<Character, Integer> dict = createCharacterCountMap(src);
 		List<CharCount> charCounts = new ArrayList<CharCount>();
 		for(Character c : dict.keySet())
 		{
 			charCounts.add(new CharCount(c, dict.get(c)));
 		}
 		Collections.sort(charCounts);
+        return charCounts;
+    }
+
+	@Override
+	public String compress(String src) {
+		// 1. 出現している文字を列挙する
+		// 2. 出現回数をカウントする
+        List<CharCount> charCounts = createSortedCharCountList(src);
+		// 3. 出現回数の少ないものから結合して二分木を生成する
 		// 4. 二分木に沿って、文字を符号化する
 		BinaryTree<Character> tree = this.makeTree(charCounts);
 		// 5. 先頭のdictを生成する
