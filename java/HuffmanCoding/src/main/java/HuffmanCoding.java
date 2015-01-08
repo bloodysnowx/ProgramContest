@@ -33,8 +33,21 @@ public class HuffmanCoding implements Coding {
 
 	@Override
 	public byte[] deCompress(byte[] src) {
-        return null;
+        String sourceString = new String(src);
+        int separator = sourceString.indexOf(';');
+        byte[] code = sourceString.substring(separator + 1).getBytes();
+        Dictionary<String, String> dict = readCodeDict(sourceString.substring(0, separator));
+        return decode(codeBitsToString(code), dict).getBytes();
 	}
+
+    private String codeBitsToString(byte[] src) {
+        BitSet bitset = BitSet.valueOf(src);
+        StringBuilder result = new StringBuilder();
+        for(int i = 0; i < bitset.length(); ++i) {
+            result.append(bitset.get(i) ? "1" : "0");
+        }
+        return result.toString();
+    }
 	
 	class CharCount implements Comparable {
 		public char c;
@@ -140,7 +153,7 @@ public class HuffmanCoding implements Coding {
 	@Override
 	public String deCompress(String src) {
         int separator = src.indexOf(';');
-		String code = src.substring(separator + 1);
+        String code = src.substring(separator + 1);
         Dictionary<String, String> dict = readCodeDict(src.substring(0, separator));
         return decode(code, dict);
 	}
