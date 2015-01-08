@@ -109,32 +109,39 @@ public class HuffmanCoding implements Coding {
 		return result.toString();
 	}
 
+    private Dictionary<String, String> readCodeDict(String src) {
+        Dictionary<String, String> dict = new Hashtable<String, String>();
+        String[] dictTmp = src.split(",");
+        for(String str : dictTmp)
+        {
+            String[] tmp = str.split("=");
+            dict.put(tmp[1], tmp[0]);
+        }
+        return dict;
+    }
+
+    private String decode(String code, Dictionary<String, String> dict) {
+        StringBuilder result = new StringBuilder();
+        StringBuilder buffer = new StringBuilder();
+
+        for(int i = 0; i < code.length(); ++i)
+        {
+            buffer.append(code.charAt(i));
+            String str = dict.get(buffer.toString());
+            if(str != null)
+            {
+                result.append(str);
+                buffer = new StringBuilder();
+            }
+        }
+        return result.toString();
+    }
+
 	@Override
 	public String deCompress(String src) {
-		String[] tmp = src.split(";");
-		String[] dictTmp = tmp[0].split(",");
-		String code = tmp[1];
-		Dictionary<String, String> dict = new Hashtable<String, String>();
-		for(String str : dictTmp)
-		{
-			tmp = str.split("=");
-			dict.put(tmp[1], tmp[0]);
-		}
-		StringBuilder result = new StringBuilder();
-		StringBuilder buffer = new StringBuilder();
-		
-		for(int i = 0; i < code.length(); ++i)
-		{
-			buffer.append(code.charAt(i));
-			String str = dict.get(buffer.toString());
-			if(str != null)
-			{
-				result.append(str);
-				buffer = new StringBuilder();
-			}
-		}
-		
-		return result.toString();
+        int separator = src.indexOf(';');
+		String code = src.substring(separator + 1);
+        Dictionary<String, String> dict = readCodeDict(src.substring(0, separator));
+        return decode(code, dict);
 	}
-
 }
