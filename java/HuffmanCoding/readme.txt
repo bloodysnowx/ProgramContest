@@ -12,3 +12,9 @@ e=10,g=01,h=00,o=11;0011011000110110
 gradle build && java -cp build/classes/main Main -d test.compressed test.decompressed
 e=10,g=01,h=00,o=11;0011011000110110
 hogehoge
+
+/Users/atsushi/github/ProgramContest/java/HuffmanCoding% gradle run -Pargs="-c test.txt test.compress" && gradle run -Pargs="-d test.compress test.decompress"
+hogehogeeeeehhhhhoooooooooooooggggggggggggggggggggggggggggggggggggggggggggggegggggggggeggggeggggggggegggggggggoggggg
+e=011,g=1,h=010,o=00;0100010110100010110110110110110100100100100100000000000000000000000000011111111111111111111111111111111111111111111110111111111110111111011111111110111111111110011111
+e=011,g=1,h=010,o=00;0100010110100010110110110110110100100100100100000000000000000000000000011111111111111111111111111111111111111111111110111111111110111111011111111110111111111110011111
+hogehogeeeeehhhhhoooooooooooooggggggggggggggggggggggggggggggggggggggggggggggegggggggggeggggeggggggggegggggggggoggggg
