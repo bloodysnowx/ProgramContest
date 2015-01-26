@@ -13,36 +13,17 @@ int KnapsackSolver::solve(int max_weight, int weights[], int values[], int lengt
 {
     // length, max_weight
     int** sums = new int*[length + 1];
-    for(int i = 0; i <= length; ++i)
-        sums[i] = new int[max_weight + 1];
-    for(int j = 0; j <= max_weight; ++j)
-        sums[0][j] = 0;
+    for(int i = 0; i <= length; ++i) sums[i] = new int[max_weight + 1];
+    for(int j = 0; j <= max_weight; ++j) sums[0][j] = 0;
     
-    NSLog(@"start solve");
-    NSDate* date = [NSDate date];
     for(int i = 1; i <= length; ++i)
     {
-        for(int j = 0; j < weights[i - 1]; ++j)
-            sums[i][j] = sums[i - 1][j];
-        for(int j = weights[i - 1]; j <= max_weight; ++j)
-            sums[i][j] = MAX(sums[i - 1][j], sums[i - 1][j - weights[i - 1]] + values[i - 1]);
-        //for(int j = max_weight - weights[i - 1] + 1; j <= max_weight; ++j)
-        //    sums[i][j] = sums[i - 1][j];
+        for(int j = 0; j < weights[i - 1]; ++j) sums[i][j] = sums[i - 1][j];
+        for(int j = weights[i - 1]; j <= max_weight; ++j) sums[i][j] = MAX(sums[i - 1][j], sums[i - 1][j - weights[i - 1]] + values[i - 1]);
     }
     int max_value = sums[length][max_weight];
-    NSTimeInterval elapsed = [[NSDate date] timeIntervalSinceDate:date];
-    NSLog(@"answer = %d, elapsed = %lf", max_value, elapsed);
 
-    for(int i = 0; i <= length; ++i)
-    {
-        for(int j = 0; j <= max_weight; ++j)
-            std::cout << sums[i][j] << ' ';
-        std::cout << std::endl;
-    }
-
-
-    for(int i = 0; i < length + 1; ++i)
-        delete[] sums[i];
+    for(int i = 0; i < length + 1; ++i) delete[] sums[i];
     delete[] sums;
     
     return max_value;
@@ -57,31 +38,24 @@ KnapsackSolver::KnapsackSolver()
     this->length = -1;
 }
 
-//
-
 KnapsackSolver::KnapsackSolver(int max_weight, int weights[], int values[], int length) : IKnapsackSolver(max_weight, weights, values, length)
 {
     sums = new int*[length + 1];
-    for(int i = 0; i <= length; ++i)
-        sums[i] = new int[max_weight + 1];
-    for(int j = 0; j <= max_weight; ++j)
-        sums[0][j] = 0;
+    for(int i = 0; i <= length; ++i) sums[i] = new int[max_weight + 1];
+    for(int j = 0; j <= max_weight; ++j) sums[0][j] = 0;
 }
 int KnapsackSolver::solve()
 {
     for(int i = 1; i <= length; ++i)
     {
-        for(int j = 0; j < weights[i - 1]; ++j)
-            sums[i][j] = sums[i - 1][j];
-        for(int j = weights[i - 1]; j <= max_weight; ++j)
-            sums[i][j] = MAX(sums[i - 1][j], sums[i - 1][j - weights[i - 1]] + values[i - 1]);
+        for(int j = 0; j < weights[i - 1]; ++j) sums[i][j] = sums[i - 1][j];
+        for(int j = weights[i - 1]; j <= max_weight; ++j) sums[i][j] = MAX(sums[i - 1][j], sums[i - 1][j - weights[i - 1]] + values[i - 1]);
     }
     return sums[length][max_weight];
 }
 KnapsackSolver::~KnapsackSolver()
 {
-    for(int i = 0; i < length + 1; ++i)
-        delete[] sums[i];
+    for(int i = 0; i < length + 1; ++i) delete[] sums[i];
     delete[] sums;
     NSLog(@"~KnapsackSolver()");
 }

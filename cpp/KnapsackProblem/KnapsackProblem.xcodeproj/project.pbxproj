@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3FF2481A75CD1A002870D0 /* MemoKnapsackSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D3FF2461A75CD1A002870D0 /* MemoKnapsackSolver.cpp */; };
 		0D4355F316D1B08900F091C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D4355F216D1B08900F091C7 /* Foundation.framework */; };
 		0D4355F616D1B08900F091C7 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D4355F516D1B08900F091C7 /* main.mm */; };
 		0D4355FA16D1B08900F091C7 /* KnapsackProblem.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D4355F916D1B08900F091C7 /* KnapsackProblem.1 */; };
 		0DD924DA16D24AEA0087AF93 /* KnapsackSolver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DD924D916D24AEA0087AF93 /* KnapsackSolver.mm */; };
 		0DD924E016D27BF20087AF93 /* RecursiveKnapsackSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DD924DE16D27BF10087AF93 /* RecursiveKnapsackSolver.cpp */; };
-		0DD924E316D287EA0087AF93 /* MemoKnapsackSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DD924E116D287EA0087AF93 /* MemoKnapsackSolver.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D3FF2461A75CD1A002870D0 /* MemoKnapsackSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoKnapsackSolver.cpp; sourceTree = "<group>"; };
+		0D3FF2471A75CD1A002870D0 /* MemoKnapsackSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoKnapsackSolver.h; sourceTree = "<group>"; };
 		0D4355EF16D1B08900F091C7 /* KnapsackProblem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KnapsackProblem; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4355F216D1B08900F091C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0D4355F516D1B08900F091C7 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
@@ -40,8 +42,6 @@
 		0DD924DC16D279C60087AF93 /* IKnapsackSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKnapsackSolver.h; sourceTree = "<group>"; };
 		0DD924DE16D27BF10087AF93 /* RecursiveKnapsackSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecursiveKnapsackSolver.cpp; sourceTree = "<group>"; };
 		0DD924DF16D27BF10087AF93 /* RecursiveKnapsackSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecursiveKnapsackSolver.h; sourceTree = "<group>"; };
-		0DD924E116D287EA0087AF93 /* MemoKnapsackSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MemoKnapsackSolver.cpp; path = ../MemoKnapsackSolver.cpp; sourceTree = "<group>"; };
-		0DD924E216D287EA0087AF93 /* MemoKnapsackSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemoKnapsackSolver.h; path = ../MemoKnapsackSolver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +84,8 @@
 		0D4355F416D1B08900F091C7 /* KnapsackProblem */ = {
 			isa = PBXGroup;
 			children = (
+				0D3FF2461A75CD1A002870D0 /* MemoKnapsackSolver.cpp */,
+				0D3FF2471A75CD1A002870D0 /* MemoKnapsackSolver.h */,
 				0D4355F516D1B08900F091C7 /* main.mm */,
 				0D4355F916D1B08900F091C7 /* KnapsackProblem.1 */,
 				0D4355F716D1B08900F091C7 /* Supporting Files */,
@@ -93,8 +95,6 @@
 				0DD924DC16D279C60087AF93 /* IKnapsackSolver.h */,
 				0DD924DE16D27BF10087AF93 /* RecursiveKnapsackSolver.cpp */,
 				0DD924DF16D27BF10087AF93 /* RecursiveKnapsackSolver.h */,
-				0DD924E116D287EA0087AF93 /* MemoKnapsackSolver.cpp */,
-				0DD924E216D287EA0087AF93 /* MemoKnapsackSolver.h */,
 			);
 			path = KnapsackProblem;
 			sourceTree = "<group>";
@@ -158,10 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3FF2481A75CD1A002870D0 /* MemoKnapsackSolver.cpp in Sources */,
 				0D4355F616D1B08900F091C7 /* main.mm in Sources */,
 				0DD924DA16D24AEA0087AF93 /* KnapsackSolver.mm in Sources */,
 				0DD924E016D27BF20087AF93 /* RecursiveKnapsackSolver.cpp in Sources */,
-				0DD924E316D287EA0087AF93 /* MemoKnapsackSolver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +233,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KnapsackProblem/KnapsackProblem-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -242,6 +243,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KnapsackProblem/KnapsackProblem-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
